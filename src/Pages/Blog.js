@@ -68,7 +68,7 @@ function RenderBlogPage() {
             
             <div className="container">
                 {filteredPosts.map((value, index) => (
-                    <a href={`/react/newsroom/post${index+1}`}>
+                    <a href={`/newsroom/post${index+1}`}>
                         <img src={value.thumbnail} alt=""  id="thumbnail" />
             
                         <p id="info">{value.author.published} · {value.author.type}</p>
