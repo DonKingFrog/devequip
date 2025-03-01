@@ -75,16 +75,16 @@ function RenderProductPage() {
             <meta name="theme-color" content="#000a13" />
             <meta name="og:site_name" content="Dev Equip" />
             <meta name="og:determiner" content="Be Equipped Today" />
-            <meta property="og:title" content="Dev Equip" />
-            <meta property="og:description" content="Dev Equip is a Roblox group focused on providing developers with tools, resources, and a community to help create amazing games/tech." />
-            <meta property="og:logo" content="https://devequip.com/Resources/Common/logo.png" />
+            <meta property="og:title" content={jsonContent.name} />
+            <meta property="og:description" content={jsonContent.description || "Dev Equip is a Roblox group focused on providing developers with tools, resources, and a community to help create amazing games/tech."} />
+            <meta property="og:logo" content="/logo.png" />
             <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="200" />
             <meta property="og:image:height" content="200" />
-            <meta property="og:image" content="https://devequip.com/Resources/Common/jpg/Untitled-8.png" />
-            <meta property="og:url" content="https://devequip.com/home" />
+            <meta property="og:image" content={jsonContent.logo} />
+            <meta property="og:url" content={jsonContent.redirect} />
             <meta property="og:type" content="website" />
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:card" content="summary_small_image" />
             <meta name="twitter:site" content="@donkingfrog" />
             <meta name="twitter:creator" content="@donkingfrog" />
           </Helmet>
