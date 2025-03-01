@@ -1,9 +1,8 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import productList from "./json/products.js";
-import MetaTags from 'react-meta-tags';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -36,27 +35,6 @@ function RenderProductPage() {
         loadPost();
     }, [productId]);
 
-    useEffect(() => {
-        document.title = `Dev Equip - ${jsonContent.name}`;
-        document.head.innerHTML += `
-          <meta name="theme-color" content="#000a13" />
-          <meta name="og:site_name" content="Dev Equip" />
-          <meta name="og:determiner" content="Be Equipped Today" />
-          <meta property="og:title" content="Dev Equip" />
-          <meta property="og:description" content="Dev Equip is a Roblox group focused on providing developers with tools, resources, and a community to help create amazing games/tech." />
-          <meta property="og:logo" content="/logo.png" />
-          <meta property="og:image:type" content="image/png" />
-          <meta property="og:image:width" content="200" />
-          <meta property="og:image:height" content="200" />
-          <meta property="og:image" content="/embedbackground.png" />
-          <meta property="og:url" content="https://devequip.com/home" />
-          <meta property="og:type" content="website" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@donkingfrog" />
-          <meta name="twitter:creator" content="@donkingfrog" />
-        `;
-    }, []);
-
     if (isLoading) {
         return <div></div>;
     }
@@ -69,31 +47,25 @@ function RenderProductPage() {
         </div>);
     }
 
-    const MetaTags = () => (
-        <HelmetProvider>
-          <Helmet>
-            <meta name="theme-color" content="#000a13" />
-            <meta name="og:site_name" content="Dev Equip" />
-            <meta name="og:determiner" content="Be Equipped Today" />
-            <meta property="og:title" content={jsonContent.name} />
-            <meta property="og:description" content={jsonContent.description || "Dev Equip is a Roblox group focused on providing developers with tools, resources, and a community to help create amazing games/tech."} />
-            <meta property="og:logo" content="/logo.png" />
-            <meta property="og:image:type" content="image/png" />
-            <meta property="og:image:width" content="200" />
-            <meta property="og:image:height" content="200" />
-            <meta property="og:image" content={jsonContent.logo} />
-            <meta property="og:url" content={jsonContent.redirect} />
-            <meta property="og:type" content="website" />
-            <meta name="twitter:card" content="summary_small_image" />
-            <meta name="twitter:site" content="@donkingfrog" />
-            <meta name="twitter:creator" content="@donkingfrog" />
-          </Helmet>
-        </HelmetProvider>
-    );
-
     return (
-        <Fragment>
-            <MetaTags />
+        <>
+            <Helmet>
+                <meta name="theme-color" content="#000a13" />
+                <meta name="og:site_name" content="Dev Equip" />
+                <meta name="og:determiner" content="Be Equipped Today" />
+                <meta property="og:title" content={jsonContent.name} />
+                <meta property="og:description" content={jsonContent.description || "Dev Equip is a Roblox group focused on providing developers with tools, resources, and a community to help create amazing games/tech."} />
+                <meta property="og:logo" content="/logo.png" />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="200" />
+                <meta property="og:image:height" content="200" />
+                <meta property="og:image" content={jsonContent.logo} />
+                <meta property="og:url" content={jsonContent.redirect} />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_small_image" />
+                <meta name="twitter:site" content="@donkingfrog" />
+                <meta name="twitter:creator" content="@donkingfrog" />
+            </Helmet>
             
             <button className="page-product-preview" onClick={(event) => (document.querySelector(".page-product-preview").classList.remove("active"))}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
@@ -237,7 +209,7 @@ function RenderProductPage() {
                     </section>
                 </div>
             </div>
-        </Fragment>
+        </>
     );
 }
 
