@@ -64,7 +64,6 @@ function RenderProductPage() {
                 <meta property="og:image" content={jsonContent.logo} />
                 <meta property="og:url" content={jsonContent.redirect} />
                 <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_small_image" />
                 <meta name="twitter:site" content="@donkingfrog" />
                 <meta name="twitter:creator" content="@donkingfrog" />
             </Helmet>
