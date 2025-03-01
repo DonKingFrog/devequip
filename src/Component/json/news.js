@@ -124,7 +124,7 @@ export default [
 
     {
         title: "Utilizing Ban API in Nexus Dynamics",
-        thumbnail: "/imgsbancode.png",
+        thumbnail: "/imgs/bancode.png",
         description: "Learn more about Roblox's Ban API and how Nexus Dynamics will to take full advantage of it.",
 
         author: {
