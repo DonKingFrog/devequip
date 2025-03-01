@@ -98,7 +98,7 @@ function RenderHomePage() {
                         <h1>Need Help?</h1>
                         <div id="wrapper">
                             <a href="/contact" id="redirect">Contact Support</a>
-                            <a href="/contact" id="redirect">Frequently Asked Questions</a>
+                            <a href="/faq" id="redirect">Frequently Asked Questions</a>
                         </div>
                     </div>
 
