@@ -1,7 +1,7 @@
 export default [
     {
         title: "Introducing Marketplace",
-        thumbnail: "https://devequip.com/Resources/Blog/marketplacepreview.png",
+        thumbnail: "/imgs/marketplacepreview.png",
         description: "Learn more about how and why we're introducing the new marketplace for Dev Equip's products. Learn more about how and why we're introducing the new marketplace for Dev Equip's products.",
 
         author: {
@@ -65,7 +65,7 @@ export default [
 
     {
         title: "v3.25 | Donation Board Hotfix",
-        thumbnail: "https://devequip.com/Resources/Blog/dbboard2.jpg",
+        thumbnail: "/imgs/dbbackground.jpg",
         description: "Quick patch for invalid developer products along with some bug fixes regarding themes and rigs.",
 
         author: {
@@ -93,7 +93,7 @@ export default [
 
     {
         title: "Nexus Dynamics's Integration of TopbarPlus",
-        thumbnail: "https://devequip.com/Resources/Blog/topbarThumbnail.png",
+        thumbnail: "/imgs/topbarsettings.png",
         description: "Developer of Nexus Dynamics releasing public information regarding Nexus Dynamics's integration of TopbarPlus.",
 
         author: {
@@ -109,7 +109,7 @@ export default [
             "",
             "TopbarPlus allows you to create your own custom buttons to align with Roblox menus so you can have a much cleaner and modern looking game. TopbarPlus automatically moves buttons around to align them unless they aren't made using TopbarPlus.",
             "",
-            "![Topbar Thumbnail](https://devequip.com/Resources/Blog/TopbarIntegration.png)",
+            "![Topbar Thumbnail](/imgs/topbar.png)",
             "___",
             "# Integration of TopbarPlus to Nexus Dynamics",
             "We've made it so Nexus Dynamics will now detect whether your using TopbarPlus in your game. If you are, it'll instead create its topbar icon using TopbarPlus to align itself without overlappin any buttons.",
@@ -124,7 +124,7 @@ export default [
 
     {
         title: "Utilizing Ban API in Nexus Dynamics",
-        thumbnail: "https://devequip.com/Resources/Blog/banCode.png",
+        thumbnail: "/imgsbancode.png",
         description: "Learn more about Roblox's Ban API and how Nexus Dynamics will to take full advantage of it.",
 
         author: {
