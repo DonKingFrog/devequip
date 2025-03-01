@@ -50,6 +50,7 @@ function RenderProductPage() {
     return (
         <>
             <Helmet>
+                <title>{jsonContent.name}</title>
                 <meta name="title" content={jsonContent.name} />
                 <meta name="theme-color" content="#000a13" />
                 <meta name="og:site_name" content="Dev Equip" />
