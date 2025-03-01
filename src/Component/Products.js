@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import productList from "./json/products.js";
 import MetaTags from 'react-meta-tags';
-import { Helmet, HelmetProvider} from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 
