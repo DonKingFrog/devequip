@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from 'react';
-import {Helmet} from "react-helmet";
 
 function RenderHomePage() {
     import("./Home.css");
@@ -20,25 +19,6 @@ function RenderHomePage() {
 
     return (
         <Fragment>
-            <Helmet>
-                <title>Dev Equip</title>
-
-                <meta name="og:site_name" content="Dev Equip" />
-                <meta name="og:determiner" content="Be Equipped Today" />
-                <meta property="og:title" content="Dev Equip" />
-                <meta property="og:description" content="Dev Equip is a Roblox group focused on providing developers with tools, resources, and a community to help create amazing games/tech." />
-                <meta property="og:logo" content="/logo.png" />
-                <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="200" />
-                <meta property="og:image:height" content="200" />
-                <meta property="og:image" content="/embedbackground.png" />
-                <meta property="og:url" content="https://devequip.com" />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@donkingfrog" />
-                <meta name="twitter:creator" content="@donkingfrog" />
-            </Helmet>
-
             <div className="page-home">
                 <section id="hero">
                     <div className="main verticle-wrapper">
