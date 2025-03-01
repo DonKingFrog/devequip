@@ -10,7 +10,7 @@ function RenderFAQPage() {
 
                 <meta itemprop="name" content="FAQ" />
                 <meta itemprop="description" content="Our answers to questions asked frequently by our community." />
-                <meta itemprop="image" content="/logo.png" />
+                <meta itemprop="image" content="https://www.devequip.com/logo.png" />
                 
                 <meta name="description" content="Our answers to questions asked frequently by our community." />
                 <meta name="author" content="Dev Equip" />
@@ -20,15 +20,15 @@ function RenderFAQPage() {
 
                 <meta property="og:title" content="FAQ" />
                 <meta property="og:description" content="Our answers to questions asked frequently by our community." />
-                <meta property="og:image" content="/logo.png" />
+                <meta property="og:image" content="https://www.devequip.com/logo.png" />
                 <meta property="og:image:width" content="465" />
                 <meta property="og:image:height" content="465" />
-                <meta property="og:url" content="/faq" />
+                <meta property="og:url" content="https://www.devequip.com/faq" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="FAQ" />
                 <meta name="twitter:description" content="Our answers to questions asked frequently by our community." />
-                <meta name="twitter:image" content="/logo.png" />
+                <meta name="twitter:image" content="https://www.devequip.com/logo.png" />
 
                 <meta name="copyright" content="Dev Equip" />
                 <meta name="distribution" content="global" />
