@@ -22,6 +22,7 @@ function RenderHomePage() {
         <Fragment>
             <Helmet>
                 <title>Dev Equip</title>
+
                 <meta name="og:site_name" content="Dev Equip" />
                 <meta name="og:determiner" content="Be Equipped Today" />
                 <meta property="og:title" content="Dev Equip" />
