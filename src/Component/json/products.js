@@ -1,7 +1,7 @@
 export default [
   {
     
-    redirect : "/react/product/nexusdynamics",
+    redirect : "/product/nexusdynamics",
     category : "Admin Panel",
     engine : "Roblox",
     price : "FREE",
@@ -124,7 +124,7 @@ export default [
 
   {
     
-    redirect : "/react/product/donationboard",
+    redirect : "/product/donationboard",
     category : "Donation Board",
     engine : "Roblox",
     price : "FREE",
@@ -228,7 +228,7 @@ export default [
 
   {
     
-    redirect : "/react/product/axisindicator",
+    redirect : "/product/axisindicator",
     category : "Plugin",
     engine : "Roblox",
     price : "FREE",
@@ -282,7 +282,7 @@ export default [
       {
         name : "RBXM",
         type : "File",
-        href : "/react/download/AxisIndicator.rbxm"
+        href : "/download/AxisIndicator.rbxm"
       }
     ],
     
@@ -303,7 +303,7 @@ export default [
 
   {
     
-    redirect : "/react/product/exploitermayhem",
+    redirect : "/product/exploitermayhem",
     category : "Admin Panel",
     engine : "Roblox",
     price : "FREE",
@@ -404,7 +404,7 @@ export default [
 
   {
     
-    redirect : "/react/product/healthgui",
+    redirect : "/product/healthgui",
     category : "User Interface",
     engine : "Roblox",
     price : "FREE",
@@ -495,7 +495,7 @@ export default [
 
   {
     
-    redirect : "/react/product/ikcontroller",
+    redirect : "/product/ikcontroller",
     category : "Script",
     engine : "Roblox",
     price : "FREE",
@@ -561,7 +561,7 @@ export default [
 
   {
     
-    redirect : "/react/product/betterbaseplate",
+    redirect : "/product/betterbaseplate",
     category : "Map",
     engine : "Roblox",
     price : "FREE",
@@ -586,7 +586,7 @@ export default [
       {
         name : "RBXL",
         type : "Link",
-        href : "/react/download/betterbaseplate"
+        href : "/download/betterbaseplate"
       }
     ],
     
@@ -607,7 +607,7 @@ export default [
 
   {
     
-    redirect : "/react/product/lowpolyisland",
+    redirect : "/product/lowpolyisland",
     category : "Map",
     engine : "Roblox",
     price : "FREE",
@@ -632,7 +632,7 @@ export default [
       {
         name : "RBXL",
         type : "Link",
-        href : "/react/download/lowpolyisland.rbxm"
+        href : "/download/lowpolyisland.rbxm"
       }
     ],
     
@@ -653,7 +653,7 @@ export default [
 
   {
     
-    redirect : "/react/product/scythe",
+    redirect : "/product/scythe",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -714,7 +714,7 @@ export default [
 
   {
     
-    redirect : "/react/product/bed",
+    redirect : "/product/bed",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -775,7 +775,7 @@ export default [
 
   {
     
-    redirect : "/react/product/bookshelf",
+    redirect : "/product/bookshelf",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -836,7 +836,7 @@ export default [
 
   {
     
-    redirect : "/react/product/burgers",
+    redirect : "/product/burgers",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -897,7 +897,7 @@ export default [
 
   {
     
-    redirect : "/react/product/katana",
+    redirect : "/product/katana",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -958,7 +958,7 @@ export default [
 
   {
     
-    redirect : "/react/product/anvil",
+    redirect : "/product/anvil",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -1019,7 +1019,7 @@ export default [
 
   {
     
-    redirect : "/react/product/chesspieces",
+    redirect : "/product/chesspieces",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -1080,7 +1080,7 @@ export default [
 
   {
     
-    redirect : "/react/product/glock",
+    redirect : "/product/glock",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
@@ -1141,7 +1141,7 @@ export default [
 
   {
     
-    redirect : "/react/product/shibaplushies",
+    redirect : "/product/shibaplushies",
     category : "3D Model",
     engine : "Roblox",
     price : "FREE",
