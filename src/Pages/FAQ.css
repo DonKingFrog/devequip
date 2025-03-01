@@ -1,0 +1,235 @@
+body {
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 200px) and (max-width: 1080px) {
+    .page-faq {
+        overflow: hidden;
+    }
+
+    .page-faq #help {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 75px;
+
+        position: relative;
+        height: auto;
+        padding: 100px 25px;
+
+        box-sizing: border-box;
+    }
+    
+    .page-faq #help .support {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .page-faq #help .support h1 {
+        font-size: 50px;
+        font-weight: 600;
+        color: var(--helpTitle);
+    }
+    
+    .page-faq #help .support #redirect {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    
+        width: auto;
+        height: auto;
+        padding: 15px 50px;
+    
+        background: var(--helpRedirect);
+        border: 1px solid var(--helpRedirectBorder);
+        border-radius: 8px;
+    
+        color: var(--helpRedirectText);
+    
+        box-sizing: border-box;
+    }
+    
+    .page-faq #help .support #redirect svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .page-faq #help .support #redirect svg path {
+        fill: var(--headerRedirectText);
+    }
+    
+    .page-faq #help .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    
+        position: relative;
+        height: auto;
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+    
+    .page-faq #help .faq button {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    
+        position: relative;
+        width: 100%;
+        padding: 12px;
+    
+        background: transparent;
+        border: none; outline: none;
+        border-radius: 8px;
+    
+        cursor: pointer;
+    }
+    
+    .page-faq #help .faq button h1 {
+        padding-right: 40px;
+
+        text-align: left;
+        
+        pointer-events: none;
+    }
+    
+    .page-faq #help .faq #plus {
+        display: inline-block;
+    
+        position: absolute;
+        top: 15px; right: 15px;
+    
+        width: 20px;
+        height: 20px;
+    }
+    
+    .page-faq #help .faq .active #minus {
+        display: inline-block;
+    
+        position: absolute;
+        top: 15px; right: 15px;
+    
+        width: 20px;
+        height: 20px;
+    }
+    
+    .page-faq #help .faq p { 
+        display: none;
+
+        text-align: left;
+        font-size: 18px;
+        color: var(--helpText);
+
+        pointer-events: none; 
+    }
+
+    .page-faq #help .faq svg { pointer-events: none  }
+    .page-faq #help .faq .active { background-color: #eaeaea; }
+    .page-faq #help .faq p b { font-weight: 600 }
+    .page-faq #help .faq p a { color: var(--accent) }
+    .page-faq #help .faq .active p { display: block }
+    .page-faq #help .faq svg path { fill: var(--helpSVG) }
+    .page-faq #help .faq .active #plus { display: none }
+    .page-faq #help .faq #minus { display: none }
+}
+
+@media screen and (min-width: 1081px) {
+    .page-faq #help {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        position: static;
+        height: auto;
+        padding: 150px 150px;
+
+        box-sizing: border-box;
+    }
+    
+    .page-faq #help .support {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 25px;
+    
+        box-sizing: border-box;
+    }
+    
+    .page-faq #help .support h1 {
+        font-size: 65px;
+        font-weight: 600;
+        color: var(--helpTitle);
+    }
+    
+    .page-faq #help .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    
+        position: relative;
+        height: auto;
+        width: 1085px;
+    }
+    
+    .page-faq #help .faq button {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    
+        position: relative;
+        width: 100%;
+        padding: 12px;
+    
+        background: transparent;
+        border: none; outline: none;
+        border-radius: 8px;
+
+        cursor: pointer;
+    }
+    
+    .page-faq #help .faq button h1 {
+        pointer-events: none;
+    }
+    
+    .page-faq #help .faq #plus {
+        display: inline-block;
+    
+        position: absolute;
+        top: 15px; right: 15px;
+    
+        width: 20px;
+        height: 20px;
+    }
+    
+    .page-faq #help .faq .active #minus {
+        display: inline-block;
+    
+        position: absolute;
+        top: 15px; right: 15px;
+    
+        width: 20px;
+        height: 20px;
+    }
+    
+    .page-faq #help .faq svg { pointer-events: none  }
+    .page-faq #help .faq .active { background-color: #eaeaea; }
+    .page-faq #help .faq p { text-align: left; display: none; pointer-events: none; }
+    .page-faq #help .faq p b { font-weight: 600 }
+    .page-faq #help .faq p a { color: var(--accent) }
+    .page-faq #help .faq .active p { display: block; font-size: 16px; color: var(--helpText); }
+    .page-faq #help .faq svg path { fill: var(--helpSVG) }
+    .page-faq #help .faq .active #plus { display: none }
+    .page-faq #help .faq #minus { display: none }
+}

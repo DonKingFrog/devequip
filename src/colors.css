@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 300;
+    src: local("Segoe UI Semilight");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    src: local("Segoe UI");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: local("Segoe UI Semibold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter";
+    text-decoration: none;
+
+    user-select: text;
+    -webkit-user-drag: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#preloader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    background: #000 url("../public/imgs/loadingCircle.gif") no-repeat center center;
+    background-size: 250px;
+
+    z-index: 500;
+}
+
+#preloader.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+:root {
+    --accent: #0078D4;
+    --accentGradient: linear-gradient(#30A4FD, #0078D4);
+    --darkAccent: #015ea5;
+
+
+    
+    /* Background */
+    --background: #f5f5f5;
+    --headerBackground: #ffffff;
+    --overlay: #f3f3f3;
+    --frameBackground: #ffffff;
+    --frameBorder: #0000001f;  
+
+    /* Border */
+    --searchBorder: #0000001a;
+    --headerBorder: #0000001f;
+
+    /* Text */
+    --title: #242424;
+    --text: #333333;
+    --secondaryText: #6e6e6e;
+    --descriptionTitle: #666666;
+    --descriptionSubTitle: #242424;
+    --description: #363636;
+    --infoText: #aaaaaa;
+    --infoBold: #747474;
+    --altText: #919191;
+    --descriptionBold: #666666;
+    --dropdownText: #525252;
+    --profileText: #475569;
+    --valueText: #475569;
+    --categoryText: #363636;
+    --buttonText: #ffffff;
+    --searchPlaceholderText: #333333a1;
+    --searchText: #333333;
+    --hoverText: #000000;
+
+
+    /* Navigation */
+    --navigationText: #242424c7;
+
+
+    /* Star */
+    --star: #475569;
+    --unstar: #bbbbbb;
+
+
+
+
+
+    /* NEW  */
+
+
+
+
+
+    /* Common */
+    --accent:#0078D4;
+    --title: #000000;
+    --text: #000000bf;
+
+
+
+
+
+    /* Header */
+    --headerTitle: #ffffff;
+    --headerText: #ffffff;
+    --headerButtonText: #ffffff;
+    --headerRedirect: #ffffff0a;
+    --headerRedirectBorder: #ffff191f;
+    --headerRedirectText: #ffffff;
+
+
+    
+    /* Hero Section */
+    --heroTitle: #ffffff;
+    --heroText: #ffffffcc;
+    --heroTrustText: #ffffff;
+    --heroBoxBackground: #0078d40a;
+    --heroBoxBackgroundActive: rgba(0, 120, 212, 0.125);
+    --heroBoxBorder: #0078d41f;
+    --heroBoxBorderActive: rgba(0, 120, 212, 0.225);
+    --heroBoxTitle: #ffffff;
+    --heroBoxText: #ffffffcc;
+
+
+
+    /* Services */
+    --servicesTitle: #000000;
+    --servicesText: #000000;
+    --servicesBoxBackground: #ffffff;
+    --servicesBoxTitle: #000000;
+    --servicesBoxText: #000000;
+
+
+
+    /* Previews */
+    --previewsTitle: #000000;
+    --previewsText: #000000;
+
+
+
+    /* Help */
+    --helpRedirect: #ffffff;
+    --helpRedirectText: #000000;
+    --helpRedirectBorder: rgba(0, 0, 0, 0.1); ;
+    --helpBox: #e5e5e5;
+    --helpSVG: #00000083;
+    --helpTitle: #000000;
+    --helpText: #000000bf;
+
+
+
+    /* Community */
+    --communityTitle: #ffffff;
+    --communityText: #ffffffbf;
+
+
+
+    /* Marketplace */
+    --activeSelectionBackground: #009bd41f;
+    --activeSelectionText: #009BD4;
+    --fullStar: #FBB600;
+    --starBackground: #00000015;
+    --reviewText: #00000080;
+
+
+    /* Footer */
+    --footerBackground: #ffffff;
+    --footerTitle: #000000;
+    --footerText: #333333;
+}
+
+
+
+
+#format h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#format h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#format hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    margin: 1em 0;
+}
+
+#format pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#format .bold {
+    font-weight: bold;
+}
+
+#format .italic {
+    font-weight: bold;
+}

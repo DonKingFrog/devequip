@@ -1,0 +1,303 @@
+body {
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 200px) and (max-width: 1080px) {
+    .page-newsroom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 19px;
+    
+        position: relative;
+        padding: 30px 25px;
+    }
+
+    .page-newsroom .back {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 15px;
+
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+        padding: 15px 20px;
+
+        background-color: #f0f0f0;
+        border-radius: 12px;
+
+        text-decoration: none;
+
+        box-sizing: border-box;
+    }
+
+    .page-newsroom .back p {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .page-newsroom .back svg {
+        rotate: 90deg;
+        width: 20px;
+        height: 20px;
+    }
+
+    .page-newsroom .back svg path {
+        fill: var(--text);
+        opacity: 50%;
+    }
+
+    .page-newsroom #title {
+        margin: 0;
+
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--descriptionSubTitle);
+    }
+    
+    .page-newsroom .subtitle {
+        margin-bottom: 12px;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--descriptionSubTitle);
+    }
+    
+    .page-newsroom a {
+        font-weight: 500;
+        text-decoration: underline;
+        color: var(--accent);
+    }
+    
+    .page-newsroom p {
+        font-weight: 500;
+        color: var(--description);
+    }
+    
+    .page-newsroom #thumbnail {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+    
+    .page-newsroom img {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid var(--frameBorder);
+    }
+    
+    .page-newsroom .frame {
+        background-color: var(--frameBackground);
+        border: 1px solid var(--frameBorder);
+        border-radius: 15px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .page-newsroom .info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    
+    .page-newsroom .info img {
+        width: 25px;
+        height: 25px;
+
+        border-radius: 22px;
+        border: none;
+
+        object-fit: cover;
+    }
+
+    .page-newsroom .info .author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
+        color: #000000;
+    }
+    
+    .page-newsroom .info .published, .page-newsroom .info span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .page-newsroom .___ {
+        margin-top: 12px;
+        margin-bottom: 50px;
+        
+        width: 100%;
+        height: 1px;
+    
+        background-color: var(--frameBorder);
+    }
+
+    .page-newsroom li {
+        margin-left: 35px;
+    }
+
+    .page-newsroom li ul {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    .page-newsroom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 19px;
+    
+        position: relative;
+        margin: 0 150px;
+        padding: 175px 300px 125px 0px;
+    }
+
+    .page-newsroom .back {
+        display: none;
+        position: absolute;
+    }
+
+    .page-newsroom #title {
+        margin: 0;
+
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--descriptionSubTitle);
+    }
+    
+    .page-newsroom .subtitle {
+        margin-bottom: 12px;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--descriptionSubTitle);
+    }
+    
+    .page-newsroom a {
+        font-weight: 500;
+        text-decoration: underline;
+        color: var(--accent);
+    }
+    
+    .page-newsroom p {
+        font-weight: 500;
+        color: var(--description);
+    }
+    
+    .page-newsroom #thumbnail {
+        margin-bottom: 80px;
+    }
+    
+    .page-newsroom img {
+        width: 1000px;
+        border-radius: 8px;
+        border: 1px solid var(--frameBorder);
+    }
+    
+    .page-newsroom .frame {
+        background-color: var(--frameBackground);
+        border: 1px solid var(--frameBorder);
+        border-radius: 15px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .page-newsroom .info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    
+    .page-newsroom .info img {
+        width: 25px;
+        height: 25px;
+
+        border-radius: 22px;
+        border: none;
+
+        object-fit: cover;
+    }
+
+    .page-newsroom .info .author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
+        color: #000000;
+    }
+    
+    .page-newsroom .info .published, .page-newsroom .info span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .page-newsroom .___ {
+        margin-top: 12px;
+        margin-bottom: 50px;
+        
+        width: 100%;
+        height: 1px;
+    
+        background-color: var(--frameBorder);
+    }
+
+    .page-newsroom li {
+        margin-left: 35px;
+    }
+
+    .page-newsroom li ul {
+        margin-bottom: 25px;
+    }
+}
+
+.page-newsroom.failed {
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    width: 100%;
+    height: 650px;
+}
+
+.page-newsroom.failed h1 {
+    font-size: 100px;
+    color: var(--text);
+}
+
+.page-newsroom .failed h2 {
+    font-size: 50px;
+    color: var(--text);
+}

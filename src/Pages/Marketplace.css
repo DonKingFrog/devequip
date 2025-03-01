@@ -1,0 +1,587 @@
+body { background-color: #ffffff }
+
+@media screen and (min-width: 200px) and (max-width: 1080px) {
+    .page-marketplace {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 125px;
+        padding: 20px 0px 75px 0px;
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filtersButton {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 10px;
+
+        padding: 0 25px;
+
+        background: transparent;
+        border: none;
+
+        font-size: 16px;
+        color: var(--text);
+    }
+
+    .page-marketplace #filtersButton svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .page-marketplace #filters {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        flex: 0 0 350px;
+
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: transparent;
+        box-sizing: border-box;
+
+        overflow-y: scroll;
+        z-index: 99;
+    }
+
+    .page-marketplace #filters section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 25px;
+
+        background-color: #ffffff;
+
+        overflow-y: scroll;
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters #title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--title);
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters #title div {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        gap: 15px;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--title);
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters #title #reset {
+        padding: 5px 15px;
+
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        border-radius: 5px;
+
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--text);
+
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters #title #close {
+        background: transparent;
+        outline: none; border: none;
+    }
+
+    .page-marketplace #filters #title #close svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .page-marketplace #filters .card {
+        display: flex; 
+        flex-direction: column;
+        gap: 20px;
+
+        width: 100%;
+        height: auto;
+        padding: 0 11px;
+        margin-bottom: 15px;
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters .card .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+
+        width: 100%;
+        height: auto;
+
+        background: transparent;
+        border: none; outline: none;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--title);
+
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters .card .top svg {
+        width: 12px;
+    }
+
+    .page-marketplace #filters .card.collapsed .top svg {
+        rotate: -90deg;
+    }
+
+    .page-marketplace #filters .card .top svg path { fill: var(--title) }
+
+    .page-marketplace #filters .card .container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        height: auto;
+        padding: 0 11px;
+    }
+
+    .page-marketplace #filters .card.collapsed .container {
+        display: none;
+    }
+
+    .page-marketplace #filters .card .container button {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 10px;
+
+        width: 100%;
+        height: auto;
+        padding: 11px 11px;
+
+        background: transparent;
+        border: none; outline: none;
+
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text);
+
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters .card .container button.active {
+        background: var(--activeSelectionBackground);
+        color: var(--activeSelectionText);
+    }
+
+    .page-marketplace #filters #rating .container {
+        gap: 10px;
+    }
+
+    .page-marketplace #filters #rating .container div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .page-marketplace #filters #rating .container div input {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters #rating .container div svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .page-marketplace #filters.active {
+        display: flex;
+    }
+
+    .page-marketplace #catalogue {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0 25px;
+        
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #product {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        height: 310px;
+        margin-bottom: 15px;
+
+        background-color: #ffffff;
+        border-radius: 8px 8px 0 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--title); 
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #product img {
+        width: 100%;
+        height: 178px;
+
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .page-marketplace #product .content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 100%;
+        height: auto;
+        padding: 15px 0 25px 0;
+
+        font-size: 25px;
+        font-weight: 600;
+        color: var(--text); 
+    }
+
+    .page-marketplace #product .content .rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1px;
+
+        width: auto;
+        height: auto;
+
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--reviewText); 
+    }
+
+    .page-marketplace #product .content .rating svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .page-marketplace #product .content .rating svg path {
+        fill: var(--starBackground); 
+        stroke: var(--starBackground);
+    }
+
+    .page-marketplace #product .content .rating .full path {
+        fill: var(--fullStar); 
+        stroke: var(--fullStar);
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    
+    .page-marketplace {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+
+        position: relative;
+        top: 125px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 125px;
+        padding: 20px 150px 75px 150px;
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filtersButton {
+        display: none;
+    }
+
+    .page-marketplace #filters {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 0 0 350px;
+
+        position: relative;
+        width: 350px;
+        height: auto;
+
+        background-color: transparent;
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 25px;
+
+        background-color: #ffffff;
+
+        
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters #title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--title);
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters #title #reset {
+        padding: 5px 15px;
+
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        border-radius: 5px;
+
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--text);
+
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters #title #close {
+        display: none;
+    }
+
+    .page-marketplace #filters .card {
+        display: flex; 
+        flex-direction: column;
+        gap: 20px;
+
+        width: 100%;
+        height: auto;
+        padding: 0 11px;
+        margin-bottom: 15px;
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #filters .card .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+
+        width: 100%;
+        height: auto;
+
+        background: transparent;
+        border: none; outline: none;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--title);
+
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters .card .top svg {
+        width: 12px;
+    }
+
+    .page-marketplace #filters .card.collapsed .top svg {
+        rotate: -90deg;
+    }
+
+    .page-marketplace #filters .card .top svg path { fill: var(--title) }
+
+    .page-marketplace #filters .card .container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        height: auto;
+        padding: 0 11px;
+    }
+
+    .page-marketplace #filters .card.collapsed .container {
+        display: none;
+    }
+
+    .page-marketplace #filters .card .container button {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 10px;
+
+        width: 100%;
+        height: auto;
+        padding: 11px 11px;
+
+        background: transparent;
+        border: none; outline: none;
+
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text);
+
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters .card .container button.active {
+        background: var(--activeSelectionBackground);
+        color: var(--activeSelectionText);
+    }
+
+    .page-marketplace #filters #rating .container {
+        gap: 10px;
+    }
+
+    .page-marketplace #filters #rating .container div {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .page-marketplace #filters #rating .container div input {
+        width: 15px;
+        cursor: pointer;
+    }
+
+    .page-marketplace #filters #rating .container div svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .page-marketplace #catalogue {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0px 20px;
+
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #product {
+        display: flex;
+        flex-direction: column;
+        
+        width: 290px;
+        height: 310px;
+
+        background-color: #ffffff;
+        border-radius: 8px;
+
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--title); 
+
+        box-sizing: border-box;
+    }
+
+    .page-marketplace #product img {
+        width: 100%;
+        height: 178px;
+
+        border-radius: 8px 8px 0 0;
+        object-fit: cover;
+    }
+
+    .page-marketplace #product .content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 100%;
+        height: auto;
+        padding: 15px 0 15px 0;
+
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--text); 
+    }
+
+    .page-marketplace #product .content .rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1px;
+
+        width: auto;
+        height: auto;
+
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--reviewText); 
+    }
+
+    .page-marketplace #product .content .rating svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .page-marketplace #product .content .rating svg path {
+        fill: var(--starBackground); 
+        stroke: var(--starBackground);
+    }
+
+    .page-marketplace #product .content .rating .full path {
+        fill: var(--fullStar); 
+        stroke: var(--fullStar);
+    }
+}

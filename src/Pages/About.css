@@ -1,0 +1,383 @@
+.navbar {
+    background: transparent;
+}
+
+header .left a h1 { color: #ffffff }
+header .left #toggleNavbar svg path { fill: #ffffff }
+header .center a { color: #ffffff }
+header .center a:nth-child(odd) { background: none;}
+header .right .redirect { 
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+@media screen and (min-width: 200px) and (max-width: 1080px) {
+    .navbar.collapsed {
+        backdrop-filter: none;
+        background-color: transparent;
+    }
+
+    .navbar {
+        position: absolute;
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .page-about {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        position: relative;
+        width: 100%;
+        padding: 100px 0;
+    
+        box-sizing: border-box;
+    }
+
+    .page-about #aboutus {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: -125px;
+        padding: 175px 25px 80px 25px;
+        
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .page-about #aboutus #overlay1 {
+        position: absolute;
+        top: 0%; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(#000000 0%, #00000000 26%);
+        opacity: 50%;
+
+        z-index: -1;
+    }
+
+    .page-about #aboutus #overlay2 {
+        position: absolute;
+        top: 0%; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(90deg, #000000 0%, #00000000 50%, #000000 100%);
+        opacity: 50%;
+
+        z-index: -1;
+    }
+
+    .page-about #aboutus #overlay3 {
+        position: absolute;
+        top: 0%; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+    .page-about #aboutus #backdrop {
+        position: absolute;
+        top: 0; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        border-radius: 0;
+        filter: blur(3px);
+
+        object-fit: cover;
+        object-position: 0% 3%;
+        z-index: -2;
+    }
+    
+    .page-about #aboutus h1 {
+        font-size: 50px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .page-about #aboutus p {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .page-about .infoSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+
+        width: 100%;
+        padding: 50px 25px;
+
+        box-sizing: border-box;
+    }    
+
+    .page-about .infoSection img {
+        width: 400px;
+        border-radius: 8px;
+    }
+
+    .page-about .infoSection .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        box-sizing: border-box;
+    }    
+
+    .page-about .infoSection h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+    .page-about .infoSection p {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.75);
+    }
+
+    .page-about #mission {
+        background: linear-gradient(45deg, var(--accent), navy);
+    }
+
+    .page-about #mission h1 {
+        color: #fff;
+    }
+
+    .page-about #mission p {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .page-about #values .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    
+        padding: 10px;
+        height: auto;
+    
+        box-sizing: border-box;
+    }
+        
+    .page-about #values .wrapper div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        width: 100%;
+        height: auto;
+    }
+    
+    .page-about #values .wrapper div .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .page-about #values .wrapper div h1 {
+        text-wrap: nowrap;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--previewsTitle);
+    }
+    
+    .page-about #values .wrapper div p {
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.75);
+    }
+    
+    .page-about #values .wrapper div svg {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .page-about #values .wrapper div svg path { fill: var(--previewsTitle) }
+}
+
+@media screen and (min-width: 1081px) {
+    .page-about {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        position: relative;
+        width: 100%;
+        padding: 125px 0;
+    
+        box-sizing: border-box;
+    }
+
+    .page-about #aboutus {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: -125px;
+        padding: 175px 150px 80px 150px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .page-about #aboutus #overlay1 {
+        position: absolute;
+        top: 0%; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(#000000 0%, #00000000 26%);
+        opacity: 50%;
+
+        z-index: -1;
+    }
+
+    .page-about #aboutus #overlay2 {
+        position: absolute;
+        top: 0%; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(90deg, #000000 0%, #00000000 50%, #000000 100%);
+        opacity: 50%;
+
+        z-index: -1;
+    }
+
+    .page-about #aboutus #overlay3 {
+        position: absolute;
+        top: 0%; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+    .page-about #aboutus #backdrop {
+        position: absolute;
+        top: 0; left: 50%; transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+
+        border-radius: 0;
+        filter: blur(3px);
+
+        object-fit: cover;
+        object-position: 0% 3%;
+        z-index: -2;
+    }
+    
+    .page-about #aboutus h1 {
+        font-size: 50px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .page-about #aboutus p {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .page-about .infoSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+
+        width: 100%;
+        padding: 50px 150px;
+
+        box-sizing: border-box;
+    }    
+
+    .page-about .infoSection img {
+        width: 400px;
+        border-radius: 8px;
+    }
+
+    .page-about .infoSection .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        box-sizing: border-box;
+    }    
+
+    .page-about .infoSection h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+    .page-about .infoSection p {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.75);
+    }
+
+    .page-about #mission {
+        background: linear-gradient(45deg, var(--accent), navy);
+    }
+
+    .page-about #mission h1 {
+        color: #fff;
+    }
+
+    .page-about #mission p {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .page-about #values .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    
+        padding: 10px;
+        height: auto;
+    
+        box-sizing: border-box;
+    }
+        
+    .page-about #values .wrapper div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        width: 100%;
+        height: auto;
+    }
+    
+    .page-about #values .wrapper div .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .page-about #values .wrapper div h1 {
+        font-size: 25px;
+        font-weight: 600;
+        color: var(--previewsTitle);
+    }
+    
+    .page-about #values .wrapper div p {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.75);
+    }
+    
+    .page-about #values .wrapper div svg {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .page-about #values .wrapper div svg path { fill: var(--previewsTitle) }
+}
