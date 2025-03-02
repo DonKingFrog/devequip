@@ -237,7 +237,11 @@ export default [
     name : "Maid",
     
     overview : [
-      
+      "A luau framework programmed to assist in the process of cleaning up memory. Utilize the GiveTask to cache resources and clean with methods when necassary.",
+      "# ",
+      "Obtain the module using standard Lua require:",
+      "",
+      "```require('path/to/module')```",
     ].join("\n"),
 
     logo : "/imgs/scripts/maidt1.jpg", 
