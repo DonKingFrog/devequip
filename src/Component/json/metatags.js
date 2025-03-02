@@ -325,7 +325,7 @@ export default {
     },
 
     "services" : () => {
-        document.title = "Serviecs — Dev Equip";
+        document.title = "Services — Dev Equip";
         const importantTags = {
             "title" : "Services",
             "description" : "Boost your productivity by commissioning us to develop assets for you.",
