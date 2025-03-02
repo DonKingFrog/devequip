@@ -72,7 +72,7 @@ function RenderBlogPage() {
             
             <div className="container">
                 {filteredPosts.map((value, index) => (
-                    <a href={`/newsroom/post${index+1}`}>
+                    <a href={`/newsroom/post${filteredPosts.length - (index)}`}>
                         <img src={value.thumbnail} alt=""  id="thumbnail" />
             
                         <p id="info">{value.author.published} · {value.author.type}</p>

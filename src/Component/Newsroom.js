@@ -14,8 +14,8 @@ function RenderNewsPost() {
     useEffect(() => {
         const loadPost = async () => {
             try {
-                const index = postId.replace("post", "") - 1;
-                const data = blogPosts[index];
+                const index = postId.replace("post", "");
+                const data = blogPosts[blogPosts.length - index];
 
                 if (data) {
                     setJsonContent(() => data);
