@@ -20,6 +20,8 @@ function RenderNewsPost() {
                 if (data) {
                     setJsonContent(() => data);
                     setIsLoading(false);
+
+                    MetaTags.post(data, postId)
                 } else {
                     throw new Error('Post not found');
                 }
@@ -31,8 +33,6 @@ function RenderNewsPost() {
 
         loadPost();
     }, [postId]);
-
-    useEffect(() => { MetaTags.post(jsonContent, postId) }, [jsonContent])
 
     if (isLoading) {
         return <div>Loading...</div>;

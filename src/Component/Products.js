@@ -24,6 +24,8 @@ function RenderProductPage() {
                     if (data.name.replaceAll(" ", "").toLowerCase() === productId) {
                         setJsonContent(() => data);
                         setIsLoading(false);
+
+                        MetaTags.product(data);
                         break;
                     }
                 }
@@ -35,8 +37,6 @@ function RenderProductPage() {
 
         loadPost();
     }, [productId]);
-
-    useEffect(() => { MetaTags.product(jsonContent) }, [jsonContent])
 
     if (isLoading) {
         return <div></div>;
