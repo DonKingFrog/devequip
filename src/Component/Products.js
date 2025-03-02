@@ -48,7 +48,7 @@ function RenderProductPage() {
         </div>);
     }
 
-    useEffect(() => { MetaTags.product(jsonContent) }, [])
+    useEffect(() => { MetaTags.product(jsonContent) }, [jsonContent])
 
     return (
         <>
