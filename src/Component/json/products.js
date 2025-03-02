@@ -228,6 +228,147 @@ export default [
 
   {
     
+    redirect : "/product/maid",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+
+    name : "Maid",
+    
+    overview : [
+      
+    ].join("\n"),
+
+    logo : "/imgs/scripts/maidt1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/maidt1.jpg"
+    ],
+    
+
+    rating : 5,
+    
+
+    downloadcount : 1,
+    downloads : [
+      {
+        name : "Lua",
+        type : "Link",
+        href : "/downloads/maid.lua"
+      },
+    ],
+    
+
+    version : "1.0",
+    created : "March 2 2025",
+    updated : "March 2 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
+    redirect : "/product/promise",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+
+    name : "Promise",
+    
+    overview : [
+      
+    ].join("\n"),
+
+    logo : "/imgs/scripts/promiset1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/promiset1.jpg"
+    ],
+    
+
+    rating : 5,
+    
+
+    downloadcount : 1,
+    downloads : [
+      {
+        name : "Lua",
+        type : "Link",
+        href : "/downloads/promise.lua"
+      },
+    ],
+    
+
+    version : "1.0",
+    created : "March 2 2025",
+    updated : "March 2 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
+    redirect : "/product/signal",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+
+    name : "Signal",
+    
+    overview : [
+      
+    ].join("\n"),
+
+    logo : "/imgs/scripts/signalt1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/signalt1.jpg"
+    ],
+    
+
+    rating : 5,
+    
+
+    downloadcount : 1,
+    downloads : [
+      {
+        name : "Lua",
+        type : "Link",
+        href : "/downloads/signal.lua"
+      },
+    ],
+    
+
+    version : "1.0",
+    created : "March 2 2025",
+    updated : "March 2 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
     redirect : "/product/axisindicator",
     category : "Plugin",
     engine : "Roblox",
