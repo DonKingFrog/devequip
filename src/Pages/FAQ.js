@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 import MetaTags from "../Component/json/metatags.js";
 
 function RenderFAQPage() {
