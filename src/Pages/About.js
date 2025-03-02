@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import MetaTags from "../Component/json/metatags.js";
 
 function RenderAboutPage() {
     import('./About.css');
@@ -18,6 +19,8 @@ function RenderAboutPage() {
             observer.observe(el)
         });
     })
+
+    useEffect(() => { MetaTags.about() }, [])
 
     return (
         <div className="page-about">

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import "./Blog.css";
+import MetaTags from "../Component/json/metatags.js";
+
 
 function RenderBlogPage() {
     const [posts, setPosts] = useState([]);
@@ -46,6 +48,8 @@ function RenderBlogPage() {
     useEffect(() => {
         
     }, [tag]);
+
+    useEffect(() => { MetaTags.blog() }, [])
 
     return (
         <div className="page-blog">

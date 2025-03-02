@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import MetaTags from "../Component/json/metatags.js";
 
 function RenderServicesPage() {
     import("./Services.css");
@@ -18,7 +19,9 @@ function RenderServicesPage() {
             observer.observe(el)
         });
     })
-
+    
+    useEffect(() => { MetaTags.services() }, [])
+    
     return (
         <Fragment>
             <div className="page-services">

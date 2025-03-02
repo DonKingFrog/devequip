@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import productList from "./json/products.js";
 import { Helmet } from 'react-helmet';
+import MetaTags from "../Component/json/metatags.js";
 
 
 
@@ -46,6 +47,8 @@ function RenderProductPage() {
             <h2>Not Found</h2>
         </div>);
     }
+
+    useEffect(() => { MetaTags.product(jsonContent) }, [])
 
     return (
         <>

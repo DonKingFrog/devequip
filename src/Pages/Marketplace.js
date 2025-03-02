@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import productList from "../Component/json/products.js";
+import MetaTags from "../Component/json/metatags.js";
 
 
 function RenderMarketplacePage() {
@@ -187,6 +188,7 @@ function RenderMarketplacePage() {
         };
     }, []);
     
+    useEffect(() => { MetaTags.marketplace() }, [])
 
     return (
         <div className="page-marketplace">

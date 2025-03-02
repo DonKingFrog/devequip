@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import MetaTags from "../Component/json/metatags.js";
 
 function RenderHomePage() {
     import("./Home.css");
@@ -16,6 +17,8 @@ function RenderHomePage() {
             observer.observe(el)
         });
     })
+
+    useEffect(() => { MetaTags.home() }, [])
 
     return (
         <Fragment>

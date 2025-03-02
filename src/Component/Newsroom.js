@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import blogPosts from '../Component/json/news.js';
 import ReactMarkdown from 'react-markdown';
 import './Newsroom.css';
+import MetaTags from "../Component/json/metatags.js";
 
 function RenderNewsPost() {
     const { postId } = useParams();
@@ -44,6 +45,8 @@ function RenderNewsPost() {
             </div>
         );
     }
+
+    useEffect(() => { MetaTags.post(jsonContent, postId) }, [])
 
     return (
         <div className="page-newsroom frame" id="format">

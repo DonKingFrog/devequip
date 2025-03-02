@@ -1,7 +1,10 @@
 import { Helmet } from 'react-helmet';
+import MetaTags from "../Component/json/metatags.js";
 
 function RenderFAQPage() {
     import ('./FAQ.css');
+
+    useEffect(() => { MetaTags.faq() }, [])
 
     return (
         <div className="page-faq">
