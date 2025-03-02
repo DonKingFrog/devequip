@@ -36,6 +36,8 @@ function RenderProductPage() {
         loadPost();
     }, [productId]);
 
+    useEffect(() => { MetaTags.product(jsonContent) }, [jsonContent])
+
     if (isLoading) {
         return <div></div>;
     }
@@ -47,8 +49,6 @@ function RenderProductPage() {
             <h2>Not Found</h2>
         </div>);
     }
-
-    useEffect(() => { MetaTags.product(jsonContent) }, [jsonContent])
 
     return (
         <>
