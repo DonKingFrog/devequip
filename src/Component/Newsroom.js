@@ -32,6 +32,8 @@ function RenderNewsPost() {
         loadPost();
     }, [postId]);
 
+    useEffect(() => { MetaTags.post(jsonContent, postId) }, [jsonContent])
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
@@ -45,8 +47,6 @@ function RenderNewsPost() {
             </div>
         );
     }
-
-    useEffect(() => { MetaTags.post(jsonContent, postId) }, [])
 
     return (
         <div className="page-newsroom frame" id="format">
