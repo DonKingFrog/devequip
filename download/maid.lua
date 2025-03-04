@@ -1,7 +1,12 @@
---[[
-    Maid.lua
-    Enhanced utility for cleaning up resources for better memory.
-]]
+--[[ 
+  Maid.lua
+  Enhanced utility for cleaning up resources for better memory.
+
+  --
+  
+  License: MIT License
+  See LICENSE file in the repository root for full license text.
+--]]
 
 
 local Maid = {}
