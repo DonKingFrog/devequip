@@ -232,3 +232,24 @@ body {
 #format .italic {
     font-weight: bold;
 }
+
+
+
+
+
+/* Lua Syntax Highlighting Colors */
+.hljs-comment {
+  color: #808080; /* Gray */
+}
+
+.hljs-string {
+  color: #DD1144; /* Red for strings */
+}
+
+.hljs-number, .hljs-literal {
+  color: #228B22; /* Green for numbers and booleans */
+}
+
+.hljs-keyword, .hljs-built_in {
+  color: #0000FF; /* Blue for keywords and built-in functions */
+}

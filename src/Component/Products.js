@@ -5,8 +5,6 @@ import productList from "./json/products.js";
 import { Helmet } from 'react-helmet';
 import MetaTags from "../Component/json/metatags.js";
 
-
-
 function RenderProductPage() {
     import ("./Products.css");
     const { productId } = useParams();
@@ -26,6 +24,7 @@ function RenderProductPage() {
                         setIsLoading(false);
 
                         MetaTags.product(data);
+                        import ("../Component/codeFormat.js");
                         break;
                     }
                 }

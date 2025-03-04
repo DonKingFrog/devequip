@@ -1,6 +1,11 @@
 --[[
     Signal.lua
     Better bindable events as a singular metable.
+	
+	--
+	
+	License: MIT License
+	See LICENSE file in the repository root for full license text.
 ]]
 
 local Signal = {}
@@ -34,6 +39,10 @@ function Signal:Connect(...)
 	return self._bevent:Connect(...)
 end
 
+function Signal:ConnectParallel(...)
+	return self._bevent:ConnectParallel(...)
+end
+
 
 function Signal:Once(...)
 	return self._bevent:Once(...)
@@ -53,6 +62,7 @@ return Signal :: {
 		Fire: (self: any, ...any) -> (),
 		Invoke: (self: any, ...any) -> ...any,
 		Connect: (self: any, func: (...any) -> RBXScriptConnection) -> RBXScriptConnection,
+		ConnectParallel: (self: any, func: (...any) -> RBXScriptConnection) -> RBXScriptConnection,
 		Once: (self: any, func: (...any) -> ()) -> RBXScriptConnection,
 		Wait: (self: any) -> ...any,
 	}

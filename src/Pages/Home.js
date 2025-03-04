@@ -107,7 +107,7 @@ function RenderHomePage() {
                     <div className="faq">
                         <button className="faqItem active" onClick={(event) => toggleFAQActive(event)}>
                             <h1>Can I request a feature or suggest improvements?</h1>
-                            <p>Yes! We value your feedback and suggestions. Visist our <a href="/discord">Join</a> to submit your ideas. Our team reviews all submissions and considers them for the future.</p>
+                            <p>Yes! We value your feedback and suggestions. Visit our <a href="/discord">Discord</a> to submit your ideas. Our team reviews all submissions and considers them for the future.</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -115,7 +115,7 @@ function RenderHomePage() {
 
                         <button className="faqItem" onClick={(event) => toggleFAQActive(event)}>
                             <h1>How can I join the Dev Equip team?</h1>
-                            <p>Careers can be found in the "Careers" section of our website. If we require new staff, we'll be posting opportunities there.</p>
+                            <p>When the careers page exist, it can be found in the footer of the website. If we require new staff, we'll be posting opportunities there.</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -123,7 +123,7 @@ function RenderHomePage() {
 
                         <button className="faqItem" onClick={(event) => toggleFAQActive(event)}>
                             <h1>My product isn't working, can I get assistance with the installation?</h1>
-                            <p>You may join our <a href="/discord">Join</a> and ask a staff member or a fellow developer to assist you!</p>
+                            <p>You may join our <a href="/discord">Discord</a> and ask a staff member/fellow developer to assist you!</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -131,7 +131,7 @@ function RenderHomePage() {
 
                         <button className="faqItem" onClick={(event) => toggleFAQActive(event)}>
                             <h1>How do I report a bug or issue?</h1>
-                            <p>To report a bug or issue, please visit our <a href="/discord">Join</a>. Find the Bug Report channel and write a detailed response about the issue you're having. Our team will investigate and address the problem as soon as possible.</p>
+                            <p>To report a bug, please visit our <a href="/discord">Discord</a> or <a href="/contact">Contact</a>. In the Discord, write a bug report ticket or use the bug report channel, otherwise use our <a href="/contact">Contact</a> page with Bug Report as the subject. Our team will investigate and address the problem as soon as possible.</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>

@@ -86,7 +86,7 @@ export default [
       {
         name : "Source-Code",
         type : "MIT License",
-        href : "https://en.wikipedia.org/wiki/MIT_License"
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
       }
     ],
     
@@ -190,7 +190,7 @@ export default [
       {
         name : "Source-Code",
         type : "MIT License",
-        href : "https://en.wikipedia.org/wiki/MIT_License"
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
       }
     ],
     
@@ -226,150 +226,376 @@ export default [
     }
   },
 
-  // {
+  {
     
-  //   redirect : "/product/maid",
-  //   category : "Script",
-  //   engine : "Roblox",
-  //   price : "FREE",
+    redirect : "/product/maid",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
 
 
-  //   name : "Maid",
+    name : "Maid",
     
-  //   overview : [
-  //     "A luau framework programmed to assist in the process of cleaning up memory. Utilize the GiveTask to cache resources and clean with methods when necassary.",
-  //     "# ",
-  //     "Obtain the module using standard Lua require:",
-  //     "",
-  //     "```require('path/to/module')```",
-  //   ].join("\n"),
+    overview : [
+      "**Maid**, a framework developed to clean memory and prevent memory leaks, flood of resources and maintaining a healthy server. This module's nature makes it essential for major frameworks or systems using RBXScriptSignals, threads, and more.",
+      "# ", "# ",
+      "# Features",
+      "**Six Supported Task**",
+      "",
+      "This framework supports six different task types that can be given/cleaned:  RBXScriptSignal, Thread, Instance, Function, UserData, { Destroy or Cancel function }",
+      "",
+      "**Selective Cleaning By Type**",
+      "",
+      "You're able to ```Maid:DoCleaning()``` for all or ```Maid:DoCleaningByType(typeof)``` of selective cleaning.",
+      "# ", "# ",
+      "# Examples",
+      "Here's a quick example of a health monitor, which disconnects the RBXScriptSignal everytime the player's character respawns.",
+      "```",
+      "local Maid = require('path/to/maid')",
+      "Maid = Maid.new()",
+      "",
+      "function CharacterAdded(character)",
+      "   Maid:DoCleaning() -- Ensures previous RBXScriptSignal is disconnected",
+      " ",
+      "   Maid:GiveTask(character.Humanoid.GetPropertyChangedSignal('Health'):Connect(function()",
+      "     print(character.Humanoid.Health)",
+      "   end)",
+      "end",
+      "",
+      "Players.PlayerAdded:Connect(function(player)",
+      "   player.CharacterAdded:Connect(function(character)",
+      "       CharacterAdded(character)",
+      "   end)",
+      "end)",
+      "```",
+      "# ", "# ",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
+      "# ",
+      "Initializing the module:",
+      "```",
+      "local Maid = require('path/to/module')",
+      "```",
+      "___",
+      "# ",
+      "Indexing a new maid:",
+      "",
+      "```",
+      "Maid = Maid.new()",
+      "```",
+      "___",
+      "# ",
+      "## Properties:",
+      "```",
+      "Maid._task : { task }",
+      "```",
+      "# ", "# ",
+      "## Methods:",
+      "```",
+      "Maid:GiveTask(task) : func -- Returned func cleans individually",
+      "",
+      "Maid:DoCleaning() : ()",
+      "Maid:DoCleaningByType(taskType: typeof) : ()",
+      "```",
+    ].join("\n"),
 
-  //   logo : "/imgs/scripts/maidt1.jpg", 
-  //   thumbnails : [
-  //     "/imgs/scripts/maidt1.jpg"
-  //   ],
-    
-
-  //   rating : 5,
-    
-
-  //   downloadcount : 1,
-  //   downloads : [
-  //     {
-  //       name : "Lua",
-  //       type : "Link",
-  //       href : "/downloads/maid.lua"
-  //     },
-  //   ],
-    
-
-  //   version : "1.0",
-  //   created : "March 2 2025",
-  //   updated : "March 2 2025",
-  //   developer : "DonKingFrog",
-  //   publisher : "Dev Equip",
-
-
-  //   email : "info@devequip.com",
-  //   website : {
-  //     name : "www.devequip.com/contact",
-  //     href : "https://devequip.com/contact"
-  //   }
-  // },
-
-  // {
-    
-  //   redirect : "/product/promise",
-  //   category : "Script",
-  //   engine : "Roblox",
-  //   price : "FREE",
-
-
-  //   name : "Promise",
-    
-  //   overview : [
-
-  //   ].join("\n"),
-
-  //   logo : "/imgs/scripts/promiset1.jpg", 
-  //   thumbnails : [
-  //     "/imgs/scripts/promiset1.jpg"
-  //   ],
-    
-
-  //   rating : 5,
-    
-
-  //   downloadcount : 1,
-  //   downloads : [
-  //     {
-  //       name : "Lua",
-  //       type : "Link",
-  //       href : "/downloads/promise.lua"
-  //     },
-  //   ],
+    logo : "/imgs/scripts/maidt1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/maidt1.jpg"
+    ],
     
 
-  //   version : "1.0",
-  //   created : "March 2 2025",
-  //   updated : "March 2 2025",
-  //   developer : "DonKingFrog",
-  //   publisher : "Dev Equip",
-
-
-  //   email : "info@devequip.com",
-  //   website : {
-  //     name : "www.devequip.com/contact",
-  //     href : "https://devequip.com/contact"
-  //   }
-  // },
-
-  // {
+    rating : 5,
     
-  //   redirect : "/product/signal",
-  //   category : "Script",
-  //   engine : "Roblox",
-  //   price : "FREE",
+    licenses : [
+      {
+        name : "Source-Code",
+        type : "MIT License",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
+      }
+    ],
 
+    downloadcount : 1,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.lua",
+    downloads : [
+      {
+        name : "Lua",
+        type : "Link",
+        href : "/downloads/maid.lua"
+      },
 
-  //   name : "Signal",
-    
-  //   overview : [
-      
-  //   ].join("\n"),
-
-  //   logo : "/imgs/scripts/signalt1.jpg", 
-  //   thumbnails : [
-  //     "/imgs/scripts/signalt1.jpg"
-  //   ],
+      {
+        name : "GitHub",
+        type : "File",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.lua"
+      },
+    ],
     
 
-  //   rating : 5,
+    version : "1.0",
+    created : "March 4 2025",
+    updated : "March 4 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
+    redirect : "/product/promise",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+    name : "Promise",
+    
+    overview : [
+      "**Promise**, a framework developed to recreate `Promises` from JavaScript. This framework helps with smoother error handling by allowing you to define what should happen when an operation succeeds (fulfilled) or fails (rejected).",
+      "# ", "# ",
+      "# Features",
+      "**State Management**",
+      "",
+      "`Pending` : The promise is still pending and has not been fulfilled or rejected.\n",
+      "`Fulfilled` : The promise has been resolved successfully.\n",
+      "`Rejected` : The promise has been rejected due to an error.",
+      "# ",
+      "**Callbacks**",
+      "",
+      "Using `FulfilledCallbacks` & `RejectedCallbacks`, you can store callbacks and execute them when fulfilled or rejected like xpcall",
+      "# ", "# ",
+      "# Examples",
+      "Here's a quick example using Promises.",
+      "```",
+      "local Promise = require('Promise')",
+      "",
+      "local myPromise = Promise.new(function(resolve, reject)",
+      "    local success = true -- Replace with your operation's success condition",
+      "    if success then",
+      "        resolve('Operation succeeded!')",
+      "    else",
+      "        reject('Operation failed.')",
+      "    end",
+      "end)",
+      "",
+      "--",
+      "",
+      "myPromise:Then(",
+      "  function(value)",
+      "      print('Success: ' .. value)",
+      "  end,",
+      "  function(reason)",
+      "      print('Error: ' .. reason)",
+      "  end",
+      ")",
+      "```",
+      "# ", "# ",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
+      "# ",
+      "Initializing the module:",
+      "```",
+      "local Signal = require('path/to/signal')",
+      "```",
+      "___",
+      "# ",
+      "Indexing a new signal:",
+      "",
+      "```",
+      "Signal = Signal.new()",
+      "```",
+      "___",
+      "# ",
+      "## Properties:",
+      "```",
+      "Signal.Event : RBXScriptSignal",
+      "Signal.OnInvoke : Function",
+      "```",
+      "#",
+      "## Methods",
+      "```",
+      "Signal:Fire(arguments: Tuple) : void",
+      "Signal:Invoke(arguments: Tuple) : Tuple",
+      "",
+      "Signal:Connect(func: function) : RBXScriptSignal",
+      "Signal:ConnectParallel(func: function) : RBXScriptSignal",
+      "Signal:Once(func: function) : RBXScriptSignal",
+      "Signal:Wait() : Variant",
+      "```",
+    ].join("\n"),
+    
+    logo : "/imgs/scripts/promiset1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/promiset1.jpg"
+    ],
     
 
-  //   downloadcount : 1,
-  //   downloads : [
-  //     {
-  //       name : "Lua",
-  //       type : "Link",
-  //       href : "/downloads/signal.lua"
-  //     },
-  //   ],
+    rating : 5,
+    
+    licenses : [
+      {
+        name : "Source-Code",
+        type : "MIT License",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
+      }
+    ],
+
+    downloadcount : 1,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/promise.lua",
+    downloads : [
+      {
+        name : "Lua",
+        type : "Link",
+        href : "/downloads/promise.lua"
+      },
+      {
+        name : "GitHub",
+        type : "File",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/promise.lua"
+      },
+    ],
     
 
-  //   version : "1.0",
-  //   created : "March 2 2025",
-  //   updated : "March 2 2025",
-  //   developer : "DonKingFrog",
-  //   publisher : "Dev Equip",
+    version : "1.0",
+    created : "March 4 2025",
+    updated : "March 4 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
 
 
-  //   email : "info@devequip.com",
-  //   website : {
-  //     name : "www.devequip.com/contact",
-  //     href : "https://devequip.com/contact"
-  //   }
-  // },
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
+    redirect : "/product/signal",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+
+    name : "Signal",
+    
+    overview : [
+      "**Signal**, a framework developed to `recreate BindableEvents` & `BindableFunctions` as one instance. Create script bindables using this framework for a much simpler and flexable framework.",
+      "# ", "# ",
+      "# Features",
+      "**Combination of BindableEvent / BindableFunction**",
+      "",
+      "Use the exact same methods you'd normally find in a bindable events/functions.",
+      "",
+      "**Script Context**",
+      "",
+      "Signal stays the same RunContext and only accessable inside scripts unless made into a global variable.",
+      "# ", "# ",
+      "# Examples",
+      "Here's a quick example of a health monitor, which disconnects the RBXScriptSignal everytime the player's character respawns.",
+      "```",
+      "local Signal = require('path/to/signal')",
+      "",
+      "local Car = {",
+      " Name = 'NormalCar'",
+      " Changed = Signal.new();",
+      "}",
+      "",
+      "Car.Changed:Connect(function(propertyName)",
+      "  print(`${propertyName} was changed.`)",
+      "end)",
+      "",
+      "--",
+      "",
+      "Car.Name = 'RaceCar';",
+      "Car.Changed:Fire('Name')",
+      "```",
+      "# ", "# ",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
+      "# ",
+      "Initializing the module:",
+      "```",
+      "local Signal = require('path/to/signal')",
+      "```",
+      "___",
+      "# ",
+      "Indexing a new signal:",
+      "",
+      "```",
+      "Signal = Signal.new()",
+      "```",
+      "___",
+      "# ",
+      "## Properties:",
+      "```",
+      "Signal.Event : RBXScriptSignal",
+      "Signal.OnInvoke : Function",
+      "```",
+      "#",
+      "## Methods",
+      "```",
+      "Signal:Fire(arguments: Tuple) : void",
+      "Signal:Invoke(arguments: Tuple) : Tuple",
+      "",
+      "Signal:Connect(func: function) : RBXScriptSignal",
+      "Signal:ConnectParallel(func: function) : RBXScriptSignal",
+      "Signal:Once(func: function) : RBXScriptSignal",
+      "Signal:Wait() : Variant",
+      "```",
+    ].join("\n"),
+
+    logo : "/imgs/scripts/signalt1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/signalt1.jpg"
+    ],
+    
+
+    rating : 5,
+    
+    licenses : [
+      {
+        name : "Source-Code",
+        type : "MIT License",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
+      }
+    ],
+
+    downloadcount : 1,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/signal.lua",
+    downloads : [
+      {
+        name : "Lua",
+        type : "Link",
+        href : "/downloads/signal.lua"
+      },
+      {
+        name : "GitHub",
+        type : "File",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/signal.lua"
+      },
+    ],
+    
+
+    version : "1.0",
+    created : "March 4 2025",
+    updated : "March 4 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
 
   {
     
@@ -410,7 +636,7 @@ export default [
       {
         name : "Source-Code",
         type : "MIT License",
-        href : "https://en.wikipedia.org/wiki/MIT_License"
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
       }
     ],
     
@@ -512,7 +738,7 @@ export default [
       {
         name : "Source-Code",
         type : "MIT License",
-        href : "https://en.wikipedia.org/wiki/MIT_License"
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
       }
     ],
     
@@ -603,7 +829,7 @@ export default [
       {
         name : "Source-Code",
         type : "MIT License",
-        href : "https://en.wikipedia.org/wiki/MIT_License"
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
       }
     ],
     
