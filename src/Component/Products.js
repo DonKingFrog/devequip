@@ -68,7 +68,7 @@ function RenderProductPage() {
                         </div>
                         <div id="buttons">
                             {jsonContent.downloads.map((dict, index) => (
-                                dict.type === "Link" ? 
+                                index > 1 ? undefined : dict.type === "Link" ? 
                                 <a key={index} id="download" href={dict.href}>Download</a> : 
                                 <a key={index} id="link" href={dict.href}>{dict.name}</a>
                             ))}

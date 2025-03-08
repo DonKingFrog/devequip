@@ -228,6 +228,114 @@ export default [
 
   {
     
+    redirect : "/product/basicobbykit",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+    name : "Basic Obby Kit",
+  
+    overview : [
+      "**🎈 Basic Obby Kit**, create fantastic obbies with our easy to use kit of basic parts any obby needs. Utilizing naming conventions and the tag feature, you can create an obby without programming anything!",
+      "# ",
+      "```",
+      "You may delete the billboard, textures, and customize the part properties.",
+      "```",
+      "Don't touch the tags if you don't know what your doing.",
+      "# ", "# ",
+      "## Features",
+      "",
+      "**Checkpoints**",
+      "",
+      "Using Checkpoints you can create a progressive saving system by naming each accordingly: `Checkpoint[1]`, `Checkpoint[2]`, `Checkpoint[3]`.\n\nYou may hide the leaderstats by replacing `true` with `false` it in the Handler script.",
+      "## ", "## ",
+      "**Conveyor**",
+      "",
+      "You may adjust the speed of a conveyor by naming it according to the speed. `Conveyor[1]` <- Speed is at 1",
+      "## ", "## ",
+      "**Speed / Jump / Damage Pads**",
+      "",
+      "We provide pads that set the Speed/JumpHeight of a player or deal damage with names similar to the conveyor, write the speed/height/damage in brackets: `Speed[32]` | `Jump[14.4]` | `Damage[50]`",
+      "## ", "## ",
+      "**Heal / Kill / Respawn Pads**",
+      "",
+      "Upon touching the heal pad, the player's health will restored to 100%. Additionally, the kill will set their health to 0. The respawn pad is an alternative to kill in which it respawns the player immediately.",
+      "## ", "## ",
+      "**Fade**",
+      "",
+      "Touching these will have a 1 second transition between ghost mode where the part disappears. Using the settings found in the Handler script you may change the cooldown.",
+
+    ].join("\n"),
+
+    contributors : [
+      {
+        name : "@SupremeFlamey",
+        deed : "Providing the textures."
+      },
+    ],
+
+    requirements: [
+      "API Services",
+    ],
+    
+
+    logo : "/imgs/scripts/obbykitt1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/obbykitt1.jpg"
+    ],
+    
+
+    rating : 5,
+    
+
+    licenses : [
+      {
+        name : "Source-Code",
+        type : "MIT License",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
+      }
+    ],
+    
+
+    downloadcount : 1,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/basic-obby-kit.lua",
+    downloads : [
+      {
+        name : "Creator Store",
+        type : "Link",
+        href : "https://create.roblox.com/store/asset/110082764617981/Basic-Obby-Kit"
+      },
+
+      {
+        name : "RBXM",
+        type : "File",
+        href : "https://assetdelivery.roblox.com/v1/asset/?id=110082764617981"
+      },
+
+      {
+        name : "GitHub",
+        type : "File",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/basic-obby-kit.lua"
+      }
+    ],
+    
+
+    version : "1.0.0",
+    created : "March 8 2025",
+    updated : "March 8 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
     redirect : "/product/maid",
     category : "Script",
     engine : "Roblox",
@@ -315,7 +423,7 @@ export default [
       }
     ],
 
-    downloadcount : 1,
+    downloadcount : 11,
     source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.lua",
     downloads : [
       {
@@ -445,7 +553,7 @@ export default [
       }
     ],
 
-    downloadcount : 1,
+    downloadcount : 4,
     source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/promise.lua",
     downloads : [
       {
@@ -567,7 +675,7 @@ export default [
       }
     ],
 
-    downloadcount : 1,
+    downloadcount : 5,
     source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/signal.lua",
     downloads : [
       {
