@@ -228,6 +228,89 @@ export default [
 
   {
     
+    redirect : "/product/compass",
+    category : "User Interface",
+    engine : "Roblox",
+    price : "FREE",
+
+    name : "Compass",
+  
+    overview : [
+      "**Compass**, implement a fully customizable compass mechanic within your game. Especially handy for players to regroup or find specific locations on non-procedural maps.",
+      "## ",
+      "The code must be placed within a `LocalScript` located in `StarterGui` or `StarterPlayerScripts`",
+      "# ", "# ",
+      "## Features",
+      "**Generated Interface**",
+      "",
+      "The script generates the UI only leaving you with the script itself!",
+      "## ", "## ",
+      "**Border Mode**",
+      "",
+      "Enable a black background incase your game has bright lights that may blend with the text.",
+      "## ", "## ",
+      "**Analog Mode**",
+      "",
+      "Remove all numbers from being displayed on the compass except letters.",
+      "## ", "## ",
+      "**Indicator**",
+      "",
+      "Display the exact degree you're looking at.",
+    ].join("\n"),    
+
+    logo : "/imgs/scripts/compasst1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/compasst1.jpg",
+      "/imgs/scripts/compasst2.jpg",
+      "/imgs/scripts/compasst3.jpg",
+    ],
+    
+
+    rating : 5,
+    
+
+    licenses : [
+      {
+        name : "Source-Code",
+        type : "MIT License",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
+      }
+    ],
+    
+
+    downloadcount : 1,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/compass.lua",
+    downloads : [
+      {
+        name : "RBXM",
+        type : "Link",
+        href : "/download/compass.rbxm"
+      },
+
+      {
+        name : "GitHub",
+        type : "File",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/compass.lua"
+      }
+    ],
+    
+
+    version : "1.0.0",
+    created : "March 10 2025",
+    updated : "March 10 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
     redirect : "/product/basicobbykit",
     category : "Script",
     engine : "Roblox",
