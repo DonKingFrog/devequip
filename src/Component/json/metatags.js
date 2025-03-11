@@ -233,7 +233,7 @@ export default {
     },
 
     "post" : (jsonContent, postId) => {
-        document.title = `${jsonContent.name} — Dev Equip`;
+        document.title = `${jsonContent.title} — Dev Equip`;
         const importantTags = {
             "title" : jsonContent.title,
             "description" : jsonContent.description,

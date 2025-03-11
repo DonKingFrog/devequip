@@ -660,11 +660,13 @@ header .right .redirect {
     .page-product-preview img {
         position: absolute;
         top: 50%; left: 50%; transform: translate(-50%, -50%);
-        width: 100%;
 
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        width: 95%;
+        height: 80%;
+
+        background-color: transparent;
+
+        object-fit: contain;
     }
 }
 
