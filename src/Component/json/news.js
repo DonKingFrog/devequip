@@ -2,7 +2,7 @@ export default [
     {
         title: "Nexus Dynamics Overhaul - Release Date Announcement",
         thumbnail: "/imgs/blogPost/nexusstatst5.jpg",
-        description: "Learn more about Roblox's Ban API and how Nexus Dynamics will to take full advantage of it.",
+        description: "The developer reveals the release date for Nexus Dynamics v2.0.5 in addition to previews and information!",
 
         author: {
             image: "/imgs/donpfp.png",
