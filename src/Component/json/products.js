@@ -512,7 +512,7 @@ export default [
       {
         name : "Lua",
         type : "Link",
-        href : "/downloads/maid.lua"
+        href : "/download/maid.lua"
       },
 
       {
@@ -642,7 +642,7 @@ export default [
       {
         name : "Lua",
         type : "Link",
-        href : "/downloads/promise.lua"
+        href : "/download/promise.lua"
       },
       {
         name : "GitHub",
@@ -764,7 +764,7 @@ export default [
       {
         name : "Lua",
         type : "Link",
-        href : "/downloads/signal.lua"
+        href : "/download/signal.lua"
       },
       {
         name : "GitHub",
