@@ -1148,7 +1148,7 @@ export default [
       {
         name : "RBXL",
         type : "Link",
-        href : "/download/betterbaseplate"
+        href : "/download/BetterBaseplate.rbxl"
       }
     ],
     
@@ -1194,7 +1194,7 @@ export default [
       {
         name : "RBXL",
         type : "Link",
-        href : "/download/lowpolyisland.rbxm"
+        href : "/download/LowPolyIsland.rbxl"
       }
     ],
     
