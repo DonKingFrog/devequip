@@ -131,7 +131,7 @@ function RenderContactPage() {
                 <div className="discord">
                     <h1>Join Our Discord</h1>
                     <p>You may be able to get attention faster through our Discord server by joining below</p>
-                    <a href="/discord">
+                    <a href="/discord/">
                         <button className="join">
                             <p>Join</p>
                         </button>

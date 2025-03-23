@@ -38,7 +38,7 @@ export default [
       "[TopbarPlus v3.0.0](https://1foreverhd.github.io/TopbarPlus/) by ForeverHD",
       "",
       "[Roblox Ban API](https://devforum.roblox.com/t/introducing-the-ban-api-and-alt-account-detection/3039740) including IP bans"
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
       {
@@ -152,7 +152,7 @@ export default [
       "**Simple Developer Products**",
       "",
       "Instead of writing IDs within a script, enable them with checkboxes on the board itself by play-testing in Roblox Studio and pressing Donate ➡ Developer Products"
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
       {
@@ -256,7 +256,7 @@ export default [
       "**Indicator**",
       "",
       "Display the exact degree you're looking at.",
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/scripts/compasst1.jpg", 
     thumbnails : [
@@ -321,9 +321,7 @@ export default [
     overview : [
       "**🎈 Basic Obby Kit**, create fantastic obbies with our easy to use kit of basic parts any obby needs. Utilizing naming conventions and the tag feature, you can create an obby without programming anything!",
       "# ",
-      "```",
-      "You may delete the billboard, textures, and customize the part properties.",
-      "```",
+      "**You may delete the billboard, textures, and customize the part properties.**",
       "Don't touch the tags if you don't know what your doing.",
       "# ", "# ",
       "## Features",
@@ -348,7 +346,7 @@ export default [
       "",
       "Touching these will have a 1 second transition between ghost mode where the part disappears. Using the settings found in the Handler script you may change the cooldown.",
 
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
       {
@@ -439,10 +437,13 @@ export default [
       "",
       "You're able to ```Maid:DoCleaning()``` for all or ```Maid:DoCleaningByType(typeof)``` of selective cleaning.",
       "# ", "# ",
-      "# Examples",
-      "Here's a quick example of a health monitor, which disconnects the RBXScriptSignal everytime the player's character respawns.",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
+      "[Read Documentation](/docs/frameworks/maid/)",
+      "#### ", "#### ",
+      "Here's a quick example of a health monitor, which uses the maid to disconnect all the RBXScriptConnections when a player's character respawns.",
       "```",
-      "local Maid = require('path/to/maid')",
+      "local Maid = require('path/to/module')",
       "Maid = Maid.new()",
       "",
       "function CharacterAdded(character)",
@@ -459,36 +460,7 @@ export default [
       "   end)",
       "end)",
       "```",
-      "# ", "# ",
-      "# Documentation",
-      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
-      "# ",
-      "Initializing the module:",
-      "```",
-      "local Maid = require('path/to/module')",
-      "```",
-      "___",
-      "# ",
-      "Indexing a new maid:",
-      "",
-      "```",
-      "Maid = Maid.new()",
-      "```",
-      "___",
-      "# ",
-      "## Properties:",
-      "```",
-      "Maid._task : { task }",
-      "```",
-      "# ", "# ",
-      "## Methods:",
-      "```",
-      "Maid:GiveTask(task) : func -- Returned func cleans individually",
-      "",
-      "Maid:DoCleaning() : ()",
-      "Maid:DoCleaningByType(taskType: typeof) : ()",
-      "```",
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     logo : "/imgs/scripts/maidt1.jpg", 
     thumbnails : [
@@ -556,11 +528,14 @@ export default [
       "`Fulfilled` : The promise has been resolved successfully.\n",
       "`Rejected` : The promise has been rejected due to an error.",
       "# ",
-      "**Callbacks**",
+      "**Chainable**",
       "",
-      "Using `FulfilledCallbacks` & `RejectedCallbacks`, you can store callbacks and execute them when fulfilled or rejected like xpcall",
+      "Chaining methods with this framework makes it easier to use and decrease size of large promises.",
       "# ", "# ",
-      "# Examples",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
+      "[Read Documentation](/docs/frameworks/promise/)",
+      "#### ", "#### ",
       "Here's a quick example using Promises.",
       "```",
       "local Promise = require('Promise')",
@@ -574,8 +549,6 @@ export default [
       "    end",
       "end)",
       "",
-      "--",
-      "",
       "myPromise:Then(",
       "  function(value)",
       "      print('Success: ' .. value)",
@@ -585,40 +558,7 @@ export default [
       "  end",
       ")",
       "```",
-      "# ", "# ",
-      "# Documentation",
-      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
-      "# ",
-      "Initializing the module:",
-      "```",
-      "local Signal = require('path/to/signal')",
-      "```",
-      "___",
-      "# ",
-      "Indexing a new signal:",
-      "",
-      "```",
-      "Signal = Signal.new()",
-      "```",
-      "___",
-      "# ",
-      "## Properties:",
-      "```",
-      "Signal.Event : RBXScriptSignal",
-      "Signal.OnInvoke : Function",
-      "```",
-      "#",
-      "## Methods",
-      "```",
-      "Signal:Fire(arguments: Tuple) : void",
-      "Signal:Invoke(arguments: Tuple) : Tuple",
-      "",
-      "Signal:Connect(func: function) : RBXScriptSignal",
-      "Signal:ConnectParallel(func: function) : RBXScriptSignal",
-      "Signal:Once(func: function) : RBXScriptSignal",
-      "Signal:Wait() : Variant",
-      "```",
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
     
     logo : "/imgs/scripts/promiset1.jpg", 
     thumbnails : [
@@ -688,8 +628,11 @@ export default [
       "",
       "Signal stays the same RunContext and only accessable inside scripts unless made into a global variable.",
       "# ", "# ",
-      "# Examples",
-      "Here's a quick example of a health monitor, which disconnects the RBXScriptSignal everytime the player's character respawns.",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
+      "[Read Documentation](/docs/frameworks/signal/)",
+      "#### ", "#### ",
+      "Here's a quick example of using signal to create a built-in changed connection.",
       "```",
       "local Signal = require('path/to/signal')",
       "",
@@ -702,45 +645,10 @@ export default [
       "  print(`${propertyName} was changed.`)",
       "end)",
       "",
-      "--",
-      "",
       "Car.Name = 'RaceCar';",
       "Car.Changed:Fire('Name')",
       "```",
-      "# ", "# ",
-      "# Documentation",
-      "This module can be used on the `Server` and `Client`, we recommend placing it in ReplicatedStorage.",
-      "# ",
-      "Initializing the module:",
-      "```",
-      "local Signal = require('path/to/signal')",
-      "```",
-      "___",
-      "# ",
-      "Indexing a new signal:",
-      "",
-      "```",
-      "Signal = Signal.new()",
-      "```",
-      "___",
-      "# ",
-      "## Properties:",
-      "```",
-      "Signal.Event : RBXScriptSignal",
-      "Signal.OnInvoke : Function",
-      "```",
-      "#",
-      "## Methods",
-      "```",
-      "Signal:Fire(arguments: Tuple) : void",
-      "Signal:Invoke(arguments: Tuple) : Tuple",
-      "",
-      "Signal:Connect(func: function) : RBXScriptSignal",
-      "Signal:ConnectParallel(func: function) : RBXScriptSignal",
-      "Signal:Once(func: function) : RBXScriptSignal",
-      "Signal:Wait() : Variant",
-      "```",
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     logo : "/imgs/scripts/signalt1.jpg", 
     thumbnails : [
@@ -812,7 +720,7 @@ export default [
       "**Customizability**",
       "",
       "Adjust the position by hovering and dragging the GUI by the white orb. Customize the colors through JSON file using the style plugin provided with Axis Indicator."
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/ai/logo.png", 
     thumbnails : [
@@ -891,7 +799,7 @@ export default [
       "**Exploiter Mayhem**",
       "",
       "If an exploiter is causing you yrouble, we give you a wide range of buyttons you can use on an exploiter to ruin their experiences such as crashing their PC!"
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
       {
@@ -992,7 +900,7 @@ export default [
       "**Name Varients**",
       "",
       "Use DisplayName/Username/None which displays above the player's head."
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
       {
@@ -1080,7 +988,7 @@ export default [
       "**Torso Movement**",
       "",
       "Move the torso into the direction your facing to let others know where your focusing on."
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     logo : "/imgs/ikc/logo.png", 
     thumbnails : [
@@ -1132,7 +1040,7 @@ export default [
     
     overview : [
       "A map designed to replace the default baseplate template provided by Roblox.",
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     logo : "/imgs/maps/bblogo.jpg", 
     thumbnails : [
@@ -1178,7 +1086,7 @@ export default [
 
     overview : [
       "A map designed for low-poly island minigames or survival games.",
-    ].join("\n"),
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     logo : "/imgs/maps/ipislogo.jpg", 
     thumbnails : [
@@ -1224,7 +1132,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/slogo.jpg", 
     thumbnails : [
@@ -1285,7 +1193,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/blogo.jpg", 
     thumbnails : [
@@ -1346,7 +1254,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/booklogo.jpg", 
     thumbnails : [
@@ -1407,7 +1315,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/burlogo.jpg", 
     thumbnails : [
@@ -1468,7 +1376,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/klogo.jpg", 
     thumbnails : [
@@ -1529,7 +1437,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/alogo.jpg", 
     thumbnails : [
@@ -1590,7 +1498,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/chesslogo.jpg", 
     thumbnails : [
@@ -1651,7 +1559,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/glogo.jpg", 
     thumbnails : [
@@ -1712,7 +1620,7 @@ export default [
     
     overview : [
       "Modeled & Textured By DonKingFrog"
-    ].join("\n"),    
+    ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),    
 
     logo : "/imgs/models/splogo.jpg", 
     thumbnails : [

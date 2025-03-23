@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import productList from "./json/products.js";
-import { Helmet } from 'react-helmet';
+import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
+import hljs from 'highlight.js';
 import MetaTags from "../Component/json/metatags.js";
 
 function RenderProductPage() {
-    import ("./Products.css");
     const { productId } = useParams();
     const [jsonContent, setJsonContent] = useState();
     const [isLoading, setIsLoading] = useState(true);
@@ -20,11 +21,11 @@ function RenderProductPage() {
                     const data = productList[i]
                     
                     if (data.name.replaceAll(" ", "").toLowerCase() === productId) {
+                        import ("./Products.css");
                         setJsonContent(() => data);
                         setIsLoading(false);
 
                         MetaTags.product(data);
-                        import ("../Component/codeFormat.js");
                         break;
                     }
                 }
@@ -37,6 +38,61 @@ function RenderProductPage() {
         loadPost();
     }, [productId]);
 
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelectorAll("pre").forEach((pre) => {
+                if (pre.querySelector("code")) {
+                    const languageClass = "language-lua"; 
+                    pre.querySelector("code").classList.add(languageClass);
+                    hljs.highlightElement(pre.querySelector("code")); 
+                }
+            
+                const container = document.createElement("div");
+                container.className = "code-block-container";
+
+                const wrapper = document.createElement("div");
+                wrapper.className = "code-block-wrapper";
+            
+                const topBar = document.createElement("div");
+                topBar.className = "code-block-top";
+            
+                const languageLabel = document.createElement("span");
+                languageLabel.className = "language-label";
+                languageLabel.innerText = "Lua"; 
+                topBar.appendChild(languageLabel);
+            
+                const copyButton = document.createElement("button");
+                copyButton.className = "copy-button";
+                copyButton.setAttribute("aria-label", "Copy to clipboard");
+                copyButton.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z"/>
+                    </svg>`;
+                topBar.appendChild(copyButton);
+            
+                copyButton.addEventListener("click", (event) => {
+                    const code = pre.querySelector("code").innerText.trim(); 
+                    navigator.clipboard.writeText(code).then(() => {
+                        copyButton.innerHTML = "Copied!"; 
+                        setTimeout(() => {
+                            copyButton.innerHTML = `
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2-16-16-16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z"/>
+                                </svg>`;
+                        }, 2000);
+                    }).catch((err) => {
+                        console.error("Failed to copy code:", err);
+                    });
+                });
+            
+                pre.parentNode.insertBefore(container, pre); 
+                wrapper.appendChild(topBar); 
+                wrapper.appendChild(pre); 
+                container.appendChild(wrapper);
+            });                
+        }, 10);
+    }, []);
+    
     if (isLoading) {
         return <div></div>;
     }
@@ -98,7 +154,11 @@ function RenderProductPage() {
                         {!jsonContent.overview ? undefined : 
                             <div id="overview">
                                 <h1>Overview</h1>
-                                <ReactMarkdown>{jsonContent.overview}</ReactMarkdown>
+                                <ReactMarkdown 
+                                    children={jsonContent ? jsonContent.overview : undefined}
+                                    remarkPlugins={[remarkGfm]}
+                                    rehypePlugins={[rehypeRaw]}
+                                />
                             </div>
                         }
                     </section>

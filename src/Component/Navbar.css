@@ -153,6 +153,10 @@
     header .center.collapsed, header .right.collapsed {
         display: none;
     }
+
+    header #nomobile {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1081px) {
@@ -261,10 +265,11 @@
         padding: 8px 16px;
     
         background: var(--accentGradient);
-        border-radius: 8px;
+        border-radius: 6px;
     
         color: var(--headerButtonText);
-    
+        font-weight: 500;
+
         box-sizing: border-box;
     }
     

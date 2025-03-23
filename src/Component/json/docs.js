@@ -1,0 +1,432 @@
+export default {
+    frameworks: {
+        name: "Frameworks",
+        content: [
+            "# Framework API references",
+            "",
+            "Documentation for the following frameworks are API references for how to use constructors, properties, methods, and static methods.",
+            "#### ",
+            "The focus of this documentation is to provide information on how to use the frameworks.",
+            "## Maid",
+            "Maid, a framework developed to clean memory and prevent memory leaks, flood of resources and maintaining a healthy server. This module's nature makes it essential for major frameworks or systems using RBXScriptSignals, threads, and more.",
+            "",
+            "<a href='/docs/frameworks/maid/'>Read Documentation</a>",
+            "",
+            "## Promise",
+            "Promise, a framework developed to recreate Promises from JavaScript. This framework helps with smoother error handling by allowing you to define what should happen when an operation succeeds (fulfilled) or fails (rejected).",
+            "",
+            "<a href='/docs/frameworks/promise/'>Read Documentation</a>",
+            "",
+            "## Signal",
+            "Signal, a framework developed to recreate BindableEvents & BindableFunctions as one instance. Create script bindables using this framework for a much simpler and flexable framework.",
+            "",
+            "<a href='/docs/frameworks/signal/'>Read Documentation</a>",
+        ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+
+        sub: {
+            maid : {
+                name: "Maid",
+                
+                pagecontents: [
+                    {
+                        name: "Constructors",
+                    },
+
+                    {
+                        name: "Methods",
+                        sub: [
+                            {
+                                name: "GiveTask",
+                            },
+
+                            {
+                                name: "DoCleaning",
+                            },
+
+                            {
+                                name: "DoCleaningByType",
+                            }
+                        ]
+                    }
+                ],
+
+                content: [
+                    "# Maid",
+                    "Framework developed to clean memory and prevent memory leaks or a flood of resources to maintain a healthy server. Usually used as a utility for larger frameworks or systems using RBXScriptSignals, threads, and more.",
+                    "####  ", "####  ",
+                    "`Task` are limited to only types being, **tables** containing a `:Destroy()` or `:Cancel()` method, **Instances**, **UserData**, **Threads**, **Functions**, and **RBXScriptConnections**.",
+                    "# ", "# ",
+                    "Initializing the module:",
+                    "```",
+                    "local Maid = require('path/to/module')",
+                    "```",
+                    "## Constructors",
+                    "Creating a brand new `metable` of a Maid Instance",
+                    "```",
+                    "local Maid = Maid.new()",
+                    "```",
+                    "## Methods",
+                    "#### ",
+                    "<div id='givetask'>",
+                    "> <a href='#givetask'>GiveTask</a> (task: any ) : func",
+                    "Add a task to the pool for bulk cleaning or manual cleaning by running the returned function.",
+                    "```",
+                    "local connection = game:GetService('Players').PlayerAdded:Connect(function(player)",
+                    "   print(`{player.Name} has joined`)",
+                    "end)",
+                    "Maid:GiveTask(thread)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='docleaning'>",
+                    "> <a id='docleaning' href='#docleaning'>DoCleaning</a> () : void",
+                    "Clear all the task provided by the method `:GiveTask()`.",                    
+                    "```",
+                    "Maid:DoCleaning()",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='docleaningbytype'>",
+                    "> <a id='docleaningbytype' href='#docleaningbytype'>DoCleaningByType</a> (taskType: [typeof]()) : void",
+                    "Filter the task pool by the given type and clear the remainder.",
+                    "```",
+                    "Maid:DoCleaningByType(RBXScriptSignal)",
+                    "```",
+                    "</div>",
+                ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+            },
+
+            promise : {
+                name: "Promise",
+
+                pagecontents: [
+                    {
+                        name: "Constructors",
+                    },
+
+                    {
+                        name: "Properties",
+                        sub: [
+                            { name: "state" },
+                            { name: "value" },
+                            { name: "fulfilledCallbacks" },
+                            { name: "rejectedCallbacks" },
+                        ]
+                    },
+
+                    {
+                        name: "Methods",
+                        sub: [
+                            { name: "Then" },
+
+                            { name: "catch" },
+
+                            { name: "finally" }
+                        ]
+                    },
+
+                    {
+                        name: "Static Methods",
+                        sub: [
+                            { name: "resolve" },
+
+                            { name: "reject" },
+
+                            { name: "all" },
+
+                            { name: "race" }
+                        ]
+                    }
+                ],
+
+                content: [
+                    "# Promise",
+                    "The Promise.lua module provides a framework for handling asynchronous operations using the promise paradigm. It supports chaining, error handling, and utility functions like all and race.",
+                    "# ",
+                    "Initializing the module:",
+                    "```",
+                    "local Promise = require('path/to/module')",
+                    "```",
+                    "# ",
+                    "## Constructors",
+                    "Creating a brand new `metable` of a promise object.",
+                    "* `resolve`: Resolves the promise with a value.",
+                    "* `reject`: Rejects the promise with a reason.",
+                    "```",
+                    "local myPromise = Promise.new(function(resolve, reject)",
+                    "    local success = true",
+                    "    if success then",
+                    "        resolve('Operation successful!')",
+                    "    else",
+                    "        reject('Something went wrong!')",
+                    "    end",
+                    "end)",
+
+                    "```",
+                    "## Properties",
+                    "#### ",
+                    "<div id='state'>",
+                    "> [State]() : string",
+                    "Property used to identify the state of the promise: `Pending`, `Fulfilled`, `Rejected`.",
+                    "</div>",
+                    "___",
+                    "<div id='value'>",
+                    "> [Value]() : any",
+                    "Property used to store the resolved value.",
+                    "</div>",
+                    "___",
+                    "<div id='reason'>",
+                    "> [Reason]() : string",
+                    "Property used to store the rejection reason.",
+                    "</div>",
+                    "___",
+                    "<div id='fulfilledcallbacks'>",
+                    "> [FulfilledCallbacks]() : Array",
+                    "Property containing callbacks for fulfillment.",
+                    "</div>",
+                    "___",
+                    "<div id='rejectedcallbacks'>",
+                    "> [RejectedCallbacks]() : Array",
+                    "Property containing callbacks for rejection.",
+                    "</div>",
+                    "# ", "# ",
+                    "## Methods",
+                    "#### ",
+                    "<div id='then'>",
+                    "> [Then]() (func: function) : [Promise]()",
+                    "Connect an logical connection after a processed promise.",
+                    "```",
+                    "myPromise:Then(function(value)",
+                    "    print('Fulfilled with:', value)",
+                    "end, function(reason)",
+                    "    print('Rejected with:', reason)",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='catch'>",
+                    "> [catch]() (func: function) : [Promise]()",
+                    "Catch any rejections through the returned function.",
+                    "```",
+                    "myPromise:catch(function(reason)",
+                    "    print('Caught an error:', reason)",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='finally'>",
+                    "> [finally]() (func: function) : [Promise]()",
+                    "A function to execute after the promise is setteled (fulfilleed or rejected).",
+                    "```",
+                    "myPromise:finally(function()",
+                    "   print('Promise settled!')",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "# ", "# ",
+                    "## Static Methods",
+                    "#### ",
+                    "<div id='resolve'>",
+                    "> [resolve]() (value: any) : [Promise]()",
+                    "Quickly return a resolved promise.",
+                    "```",
+                    "local resolvedPromise = Promise.resolve('Instant success!')",
+                    "resolvedPromise:Then(function(value)",
+                    "    print('Resolved with:', value)",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='reject'>",
+                    "> [reject]() (value: any) : [Promise]()",
+                    "Quickly return a rejected promise.",
+                    "```",
+                    "local rejectedPromise = Promise.reject('Immediate failure!')",
+                    "rejectedPromise:catch(function(reason)",
+                    "    print('Rejected with:', reason)",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='all'>",
+                    "> [all]() (promises: Array) : [Promise]()",
+                    "Resolves when all promises are resolved or rejects if any promise is rejected.",
+                    "```",
+                    "local promise1 = Promise.resolve(10)",
+                    "local promise2 = Promise.resolve(20)",
+                    "local promise3 = Promise.reject('Error in promise3!')",
+                    "",
+                    "Promise.all({promise1, promise2, promise3})",
+                    "    :Then(function(results)",
+                    "        print('All promises fulfilled:', results)",
+                    "    end)",
+                    "    :catch(function(reason)",
+                    "        print('At least one promise rejected:', reason)",
+                    "    end)                    ",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='race'>",
+                    "> [race]() (promises: Array) : [Promise]()",
+                    "Settle as soon as the fastest promise resolves or rejects.",
+                    "```",
+                    "local fast = Promise.new(function(resolve)",
+                    "    wait(1)",
+                    "    resolve('Fast promise wins!')",
+                    "end)",
+                    "",
+                    "local slow = Promise.new(function(resolve)",
+                    "    wait(3)",
+                    "    resolve('Slow promise resolves.')",
+                    "end)",
+                    "",
+                    "Promise.race({fast, slow}):Then(function(result)",
+                    "    print(result)",
+                    "end)",
+                    "```",
+                    "</div>",
+                ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+            },
+
+            signal : {
+                name: "Signal",
+
+                pagecontents: [
+                    {
+                        name: "Constructors",
+                    },
+
+                    {
+                        name: "Properties",
+                        sub: [
+                            {
+                                name: "Event",
+                            },
+
+                            {
+                                name: "OnInvoke",
+                            }
+                        ]
+                    },
+
+                    {
+                        name: "Methods",
+                        sub: [
+                            {
+                                name: "Connect",
+                            },
+
+                            {
+                                name: "ConnectParallel",
+                            },
+
+                            {
+                                name: "Once",
+                            },
+
+                            {
+                                name: "Wait",
+                            },
+                        ]
+                    }
+                ],
+
+                content: [
+                    "# Signal",
+                    "Signal, a framework developed to recreate BindableEvents & BindableFunctions as one instance. Create script bindables using this framework for a much simpler and flexable framework.",
+                    "# ", "# ",
+                    "Initializing the module:",
+                    "```",
+                    "local Signal = require('path/to/module')",
+                    "```",
+                    "## Constructors",
+                    "Creating a brand new `metable` RBXScriptSignal",
+                    "```",
+                    "local Connection = Signal.new()",
+                    "```",
+                    "## Properties",
+                    "#### ",
+                    "<div id='event'>",
+                    "> [Event]() : RBXScriptSignal",
+                    "Property used to create a `RBXScriptConnection`",
+                    "</div>",
+                    "___",
+                    "<div id='oninvoke'>",
+                    "> [OnInvoke]() : Function",
+                    "Property that runs the given function when `:Invoke` is called",
+                    "</div>",
+                    "# ", "# ",
+                    "## Methods",
+                    "#### ",
+                    "<div id='connect'>",
+                    "> [Connect]() (func: function) : [RBXScriptConnection]()",
+                    "Connects the given function to the event and returns a `RBXScriptConnection` that represents it.",
+                    "```",
+                    "Signal:Connect(function()",
+                    "   print('Hello World') -- Prints every invoke of :Fire()",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='connectparallel'>",
+                    "> [ConnectParallel]() (func: function) : [RBXScriptConnection]()",
+                    "Connects the given function parallel to the event and returns a `RBXScriptConnection` that represents it.",
+                    "```",
+                    "Signal:ConnectParallel(function()",
+                    "   print('Hello World') -- Prints every invoke of :Fire()",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='once'>",
+                    "> [Once]() (func: function) : [RBXScriptConnection]()",
+                    "Connects the given function to the event (for a single invocation) and returns a `RBXScriptConnection` that represents it.",
+                    "```",
+                    "Signal:Once(function()",
+                    "   print('Hello World') -- Prints only once after invoking :Fire()",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='wait'>",
+                    "> [Wait]() : Varient",
+                    "Yields the current thread until the signal fires and returns the arguments provided by the signal.",
+                    "```",
+                    "Signal:Wait()",
+                    "print('Hello World') -- Prints after Signal:Fire() was invoked :Wait()",
+                    "```",
+                    "</div>",
+                    "",
+                ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+            },
+        }
+    },
+
+    nexusdynamics: {
+        name: "Nexus Dynamics",
+
+        sub: {
+            installation : {
+                name: "Installation",
+
+                content: [
+                    "# Getting Started"
+                ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+            },
+        }
+    },
+
+    donationboard: {
+        name: "Donation Board",
+
+        sub: {
+            installation : {
+                name: "Installation",
+
+                content: [
+                    "# Getting Started"
+                ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+            },
+        }
+    },
+} 

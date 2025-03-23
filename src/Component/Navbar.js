@@ -26,14 +26,15 @@ function Navbar() {
             </div>
 
             <div className={`center ${!navbar ? "collapsed" : ""}`}>
-                <a href="/about">About</a>
-                <a href="/marketplace">Marketplace</a>
-                <a href="/blog">Blog</a>
-                <a href="/services">Services</a>
+                <a href="/about/">About</a>
+                <a href="/marketplace/">Marketplace</a>
+                <a id="nomobile" href="/docs/frameworks/maid/">Docs</a>
+                <a href="/blog/">Blog</a>
+                <a href="/services/">Services</a>
             </div>
 
             <div className={`right ${!navbar ? "collapsed" : ""}`}>
-                <a href="/contact" className="button">
+                <a href="/contact/" className="button">
                     Contact Us
                 </a>
             </div>

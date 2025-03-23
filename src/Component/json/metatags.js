@@ -277,6 +277,53 @@ export default {
         });
     },
 
+    "docs" : () => {
+      document.title = "Documentation — Dev Equip";
+      const importantTags = {
+          "title" : "Documentation",
+          "description" : "Learn more about how our products work through official written documentation.",
+          "url": "https://www.devequip.com/docs/"
+      }
+
+
+      const metaTags = [
+        { itemprop: "name", content: importantTags.title },
+        { itemprop: "description", content: importantTags.description },
+        { itemprop: "image", content: "https://www.devequip.com/logo.png" },
+        
+        { name: "description", content: importantTags.description },
+        { name: "author", content: "Dev Equip" },
+        { name: "keywords", content: "dev, devs, developers, equip, equipment, roblox, unity, games, game, administrator, development, marketplace, store" },
+        { name: "theme-color", content: "#000000" },
+        
+        { property: "og:site_name", content: "Dev Equip" },
+        { property: "og:title", content: importantTags.title },
+        { property: "og:description", content: importantTags.description },
+        { property: "og:image", content: "https://www.devequip.com/logo.png" },
+        { property: "og:image:width", content: "465" },
+        { property: "og:image:height", content: "465" },
+        { property: "og:url", content: importantTags.url },
+        
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: importantTags.title },
+        { name: "twitter:description", content: importantTags.description },
+        { name: "twitter:image", content: "https://www.devequip.com/logo.png" },
+        
+        { name: "copyright", content: "Dev Equip" },
+        { name: "distribution", content: "global" }
+      ];
+    
+      metaTags.forEach(tag => {
+        let metaElement = document.querySelector(`meta[${Object.keys(tag)[0]}='${tag[Object.keys(tag)[0]]}']`);
+        if (!metaElement) {
+          metaElement = document.createElement('meta');
+          metaElement.setAttribute(Object.keys(tag)[0], tag[Object.keys(tag)[0]]);
+          document.head.appendChild(metaElement);
+        }
+        metaElement.setAttribute('content', tag.content);
+      });
+  },
+
     "faq" : () => {
         document.title = "FAQ — Dev Equip";
         const importantTags = {

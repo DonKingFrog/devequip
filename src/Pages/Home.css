@@ -631,7 +631,7 @@ header .right .redirect {
         width: 100%;
         padding: 25px 0;
     }
-    
+
     .page-home #hero .highlights {
         display: flex;
         flex-direction: row;
@@ -936,11 +936,11 @@ header .right .redirect {
         align-items: center;
         gap: 10px;
     
-        padding: 10px 20px;
+        padding: 12px 20px;
     
         background: var(--headerRedirect);
         border: 1px solid var(--headerRedirectBorder);
-        border-radius: 8px;
+        border-radius: 6px;
     
         color: var(--headerRedirectText);
     
@@ -962,10 +962,10 @@ header .right .redirect {
         align-items: center;
         gap: 10px;
     
-        padding: 10px 20px;
+        padding: 12px 20px;
     
         background: var(--accentGradient);
-        border-radius: 8px;
+        border-radius: 6px;
     
         color: var(--headerButtonText);
     

@@ -670,8 +670,7 @@ header .right .redirect {
     }
 }
 
-@media screen and (min-width: 1081px) {
-
+@media screen and (min-width: 1081px) {    
     .page-product {
         display: flex;
         flex-direction: column;
@@ -879,23 +878,17 @@ header .right .redirect {
 
         box-sizing: border-box;
     }
-
+    
     .page-product #description p > code {
-        padding: 0 5px;
-
-        background-color: #a8c5ff80;
-        border: 1px solid #bbc8e2;
-        border-radius: 5px;
-
-        color: #000;
-    }  
-
-    .page-product #description pre {
-        padding: 15px;
-
-        background-color: #f2f2f2;
-        border-radius: 8px;
-    }
+        padding: 0 4px;
+      
+        background-color: color-mix(in srgb, var(--accent) 5%, transparent);
+        border-radius: 4px;
+      
+        font-size: 18px;
+        font-weight: 300;
+        color: var(--accent);
+      }
 
     .page-product #description > div {
         display: flex;

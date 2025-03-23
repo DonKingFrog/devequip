@@ -18,29 +18,29 @@ function Footer() {
                 <div className="redirect">
                     <div id="about">
                         <p>ABOUT</p>
-                        <a href="/about">Our Story</a>
-                        <a href="/blog">Blog</a>
-                        <a href="/contact">Contact Us</a>
+                        <a href="/about/">Our Story</a>
+                        <a href="/blog/">Blog</a>
+                        <a href="/services/">Services</a>
                     </div>
 
                     <div id="products">
                         <p>PRODUCTS</p>
-                        <a href="/product/nexusdynamics">Nexus Dynamics</a>
-                        <a href="/product/donationboard">Donation Board</a>
-                        <a href="/product/axisindicator">Axis Indicator</a>
-                        <a href="/marketplace">Marketplace</a>
+                        <a href="/product/nexusdynamics/">Nexus Dynamics</a>
+                        <a href="/product/donationboard/">Donation Board</a>
+                        <a href="/product/axisindicator/">Axis Indicator</a>
+                        <a href="/marketplace/">Marketplace</a>
                     </div>
 
-                    <div id="about">
+                    <div id="resources">
                         <p>RESOURCES</p>
-                        <a href="/services">Services</a>
-                        <a href="/discord">Community</a>
+                        <a href="/docs">Documentation</a>
+                        <a href="/discord/">Community</a>
                     </div>
 
                     <div id="support">
                         <p>SUPPORT</p>
-                        <a href="/faq">FAQ</a>
-                        <a href="/contact">Report a Problem</a>
+                        <a href="/faq/">FAQ</a>
+                        <a href="/contact/">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -51,9 +51,9 @@ function Footer() {
                 </div>
 
                 {/* <div className="center">
-                    <a href="/privacypolicy">Privacy Policy</a>
-                    <a href="/cookiepolicy">Cookie Policy</a>
-                    <a href="/legal">Legal</a>
+                    <a href="/privacypolicy/">Privacy Policy</a>
+                    <a href="/cookiepolicy/">Cookie Policy</a>
+                    <a href="/legal/">Legal</a>
                 </div> */}
 
                 <div className="right">

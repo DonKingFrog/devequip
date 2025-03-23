@@ -31,7 +31,7 @@ function RenderServicesPage() {
                         <p>Boost your productivity by commissioning us to develop assets for you.</p>
                         
                         <div className="actions">
-                            <a href="/contact" id="button">Contact Us</a>
+                            <a href="/contact/" id="button">Contact Us</a>
                         </div>
                     </div>
 

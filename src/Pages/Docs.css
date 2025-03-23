@@ -1,0 +1,30 @@
+.navbar {
+  position: absolute;
+  background: transparent;
+}
+
+.page-docs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 9px;
+
+  width: 1000px;
+  margin: 200px auto;
+  box-sizing: border-box;
+}
+
+.page-docs h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.page-docs h2 {
+  font-size: 28px;
+  font-weight: 550;
+}
+
+.page-docs p {
+  font-size: 18px;
+}

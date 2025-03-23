@@ -34,8 +34,8 @@ function RenderHomePage() {
                         <p>Equip yourself with game-ready assets made by professional developers.</p>
                         
                         <div className="actions">
-                            <a href="/marketplace" id="button">Marketplace</a>
-                            <a href="/about" id="redirect">Learn More</a>
+                            <a href="/marketplace/" id="button">Marketplace</a>
+                            <a href="/about/" id="redirect">Learn More</a>
                         </div>
                     </div>
 
@@ -99,15 +99,15 @@ function RenderHomePage() {
                     <div className="support">
                         <h1>Need Help?</h1>
                         <div id="wrapper">
-                            <a href="/contact" id="redirect">Contact Support</a>
-                            <a href="/faq" id="redirect">Frequently Asked Questions</a>
+                            <a href="/contact/" id="redirect">Contact Support</a>
+                            <a href="/faq/" id="redirect">Frequently Asked Questions</a>
                         </div>
                     </div>
 
                     <div className="faq">
                         <button className="faqItem active" onClick={(event) => toggleFAQActive(event)}>
                             <h1>Can I request a feature or suggest improvements?</h1>
-                            <p>Yes! We value your feedback and suggestions. Visit our <a href="/discord">Discord</a> to submit your ideas. Our team reviews all submissions and considers them for the future.</p>
+                            <p>Yes! We value your feedback and suggestions. Visit our <a href="/discord/">Discord</a> to submit your ideas. Our team reviews all submissions and considers them for the future.</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -123,7 +123,7 @@ function RenderHomePage() {
 
                         <button className="faqItem" onClick={(event) => toggleFAQActive(event)}>
                             <h1>My product isn't working, can I get assistance with the installation?</h1>
-                            <p>You may join our <a href="/discord">Discord</a> and ask a staff member/fellow developer to assist you!</p>
+                            <p>You may join our <a href="/discord/">Discord</a> and ask a staff member/fellow developer to assist you!</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -131,7 +131,7 @@ function RenderHomePage() {
 
                         <button className="faqItem" onClick={(event) => toggleFAQActive(event)}>
                             <h1>How do I report a bug or issue?</h1>
-                            <p>To report a bug, please visit our <a href="/discord">Discord</a> or <a href="/contact">Contact</a>. In the Discord, write a bug report ticket or use the bug report channel, otherwise use our <a href="/contact">Contact</a> page with Bug Report as the subject. Our team will investigate and address the problem as soon as possible.</p>
+                            <p>To report a bug, please visit our <a href="/discord/">Discord</a> or <a href="/contact/">Contact</a>. In the Discord, write a bug report ticket or use the bug report channel, otherwise use our <a href="/contact/">Contact</a> page with Bug Report as the subject. Our team will investigate and address the problem as soon as possible.</p>
 
                             <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
                             <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -150,7 +150,7 @@ function RenderHomePage() {
                 <section id="community">
                     <h1>Ready to simplify your<br />developing career?</h1>
                     <p>Join thousands of satisfied users and experience the difference.</p>
-                    <a className="hidden" id="button" href="/discord">Join Community Discord</a>
+                    <a className="hidden" id="button" href="/discord/">Join Community Discord</a>
                     <img src="imgs/codingbackdrop.jpg" alt="" id="backdrop" />
                 </section>
             </div>

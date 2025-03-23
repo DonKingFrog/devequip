@@ -12,7 +12,9 @@
     "react-markdown": "^10.0.0",
     "react-meta-tags": "^1.0.1",
     "react-router-dom": "^7.1.5",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

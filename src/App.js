@@ -11,6 +11,7 @@ import RenderMarketplacePage from './Pages/Marketplace.js';
 import RenderAboutPage from './Pages/About.js';
 import RenderServicesPage from "./Pages/Services.js";
 import RenderFAQPage from './Pages/FAQ.js';
+import {RenderDocs, RenderDocumentation} from './Pages/Docs.js';
 
 import Loading from "./Component/Loading.js";
 
@@ -122,6 +123,28 @@ function FAQPage() {
   )
 }
 
+function DocsPage() {
+  return(
+    <Fragment>
+      <Loading />
+      <Navbar />
+      <RenderDocs />
+      <Footer />
+    </Fragment>
+  )
+}
+
+function DocumentationPage() {
+  return(
+    <Fragment>
+      <Loading />
+      <Navbar />
+      <RenderDocumentation />
+      <Footer />
+    </Fragment>
+  )
+}
+
 export {
   HomePage,
   MarketplacePage,
@@ -133,4 +156,6 @@ export {
   AboutPage,
   ServicesPage,
   FAQPage,
+  DocsPage,
+  DocumentationPage
 }

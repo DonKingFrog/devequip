@@ -1,0 +1,372 @@
+.navbar {
+  position: fixed;
+  background: #fff;
+}
+
+@media screen and (min-width: 200px) and (max-width: 1080px) {
+  .page-documentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    width: 100%;
+    height: auto;
+
+    margin: 125px 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+  }
+
+  .page-documentation a {
+    color: var(--accent);
+  }
+
+  .page-documentation .navigation {
+    display: none;
+  }
+
+  .page-documentation .viewport {
+      display: flex;
+      flex-direction: column;
+      
+      width: 100%;
+      height: auto;
+
+      box-sizing: border-box;
+  }
+
+  .page-documentation #path {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    height: auto;
+    padding-bottom: 16px;
+    margin-bottom: 25px;
+
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+  }
+
+  .page-documentation .viewport #content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: auto;
+  }
+
+  .page-documentation .viewport #content h1 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #242424;
+  }
+
+  .page-documentation .viewport #content h2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #242424;
+  }
+
+  .page-documentation .viewport #content strong {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444444;
+  }
+
+  .page-documentation .viewport #content hr {
+    margin: 5px 0;
+    border-color: rgba(0, 0, 0, 0.07);
+  }
+
+  .page-documentation .viewport #content li {
+    padding: 5px 0;
+  }
+
+  .page-documentation .viewport #content p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #242424;
+    
+  }
+
+  .page-documentation .viewport #content p code {
+    padding: 0 4px;
+
+    background-color: color-mix(in srgb, var(--accent) 5%, transparent);
+    border-radius: 4px;
+
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--accent);
+  }
+
+  .page-documentation .viewport #content blockquote p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #242424;
+  }
+
+  .page-documentation .viewport #content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .page-documentation .pagecontents {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    position: fixed;
+    right: 350px;
+    width: auto;
+  }
+
+  .page-documentation #onthispage {
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+  }
+
+  .page-documentation .pagecontents a {
+    padding: 3px 12px;
+    border-left: 2px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .page-documentation .pagecontents a.active {
+    border-left: 3px solid var(--accent);
+  }
+
+  .page-documentation .pagecontents a:has(#sub) {
+    margin-left: 12px;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .page-documentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+
+    width: 100%;
+    height: auto;
+
+    padding: 125px 150px 225px 150px;    
+    box-sizing: border-box;
+}
+
+.page-documentation a {
+  color: var(--accent);
+}
+
+.page-documentation .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: fixed;
+    left: 400px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.page-documentation .navigation .dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+
+    box-sizing: border-box;
+}
+
+.page-documentation .navigation .dropdown-wrapper #top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    background: transparent;
+    border: none; outline: none;
+
+    text-wrap: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+
+    cursor: pointer;
+}
+
+.page-documentation .navigation .dropdown-wrapper #top svg {
+    width: 12px;
+    height: 12px;
+    rotate: 180deg;
+}
+
+.page-documentation .navigation .dropdown-wrapper.active #top svg {
+    width: 12px;
+    height: 12px;
+    rotate: 0deg;
+}
+
+.page-documentation .navigation .dropdown-wrapper #top svg {
+    fill: #000000;
+}
+
+.page-documentation .navigation .dropdown-wrapper #content { display: none }
+.page-documentation .navigation .dropdown-wrapper #list { display: none }
+.page-documentation .navigation .dropdown-wrapper #stringList { display: none }
+
+.page-documentation .navigation .dropdown-wrapper.active #content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-left: 22px;
+    box-sizing: border-box;
+}
+
+.page-documentation .navigation a.active, .page-documentation .pagecontents a.active { color: var(--accent) }
+.page-documentation .navigation a, .page-documentation .pagecontents a { color: var(--text) }
+.page-documentation .navigation p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.page-documentation .viewport {
+    display: flex;
+    flex-direction: column;
+    
+    width: 756px;
+    height: auto;
+    padding: 0 26px;
+
+    box-sizing: border-box;
+}
+
+.page-documentation #path {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  height: auto;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.page-documentation .viewport #content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  height: auto;
+}
+
+.page-documentation .viewport #content h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #242424;
+}
+
+.page-documentation .viewport #content h2 {
+  margin-top: 60px;
+  margin-bottom: 10px;
+
+  font-size: 24px;
+  font-weight: 600;
+  color: #242424;
+}
+
+.page-documentation .viewport #content strong {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444444;
+}
+
+.page-documentation .viewport #content hr {
+  margin: 5px 0;
+  border-color: rgba(0, 0, 0, 0.07);
+}
+
+.page-documentation .viewport #content li {
+  padding: 5px 0;
+}
+
+.page-documentation .viewport #content p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #242424;
+}
+
+.page-documentation .viewport #content p code {
+  padding: 0 4px;
+
+  background-color: color-mix(in srgb, var(--accent) 5%, transparent);
+  border-radius: 4px;
+
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.page-documentation .viewport #content blockquote p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #242424;
+}
+
+.page-documentation .viewport #content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.page-documentation .pagecontents {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  position: fixed;
+  right: 350px;
+  width: auto;
+}
+
+.page-documentation #onthispage {
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}
+
+.page-documentation .pagecontents a {
+  padding: 3px 12px;
+  border-left: 2px solid rgba(0, 0, 0, 0.07);
+}
+
+.page-documentation .pagecontents a.active {
+  border-left: 3px solid var(--accent);
+}
+
+.page-documentation .pagecontents a:has(#sub) {
+  margin-left: 12px;
+}
+}
