@@ -101,10 +101,26 @@ function RenderDocumentation() {
             });
             
           
+            document.querySelectorAll('img[alt*="57%"]').forEach(img => {
+                img.style.width = "57%";
+            });  
+            
+            document.querySelectorAll('img[alt*="75%"]').forEach(img => {
+                img.style.width = "75%";
+            });  
+
+            document.querySelectorAll('img[alt*="100%"]').forEach(img => {
+                img.style.width = "100%";
+            });  
+
+
             document.querySelectorAll("h2").forEach((h2) => {
                 h2.id = h2.textContent.toLowerCase();
             })
-                    
+               
+            document.querySelectorAll("h3").forEach((h3) => {
+                h3.id = h3.innerText.toLowerCase();
+            })
         }, 10);
     }, [docPath]);
 
@@ -246,9 +262,9 @@ function RenderDocumentation() {
                     <div id="content">
                         <A href="/docs/nexusdynamics/installation/">Installation</A>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="dropdown-wrapper active">
+                {/* <div className="dropdown-wrapper active">
                     <button id="top" onClick={(event) => { toggleDropdown(event)} }>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
                         Donation Board
