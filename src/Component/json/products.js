@@ -17,6 +17,8 @@ export default [
       // "Edit terrain and sun position in-game, similar to Roblox Studio",
       "",
       "Nexus Dynamics is designed to provide developers with a powerful and user-friendly interface to manage their Roblox games, ensuring a smooth and enjoyable experience for both developers and players.",
+      "#### ",
+      "**How to install Nexus Dynamics - [Learn More](https://devequip.com/docs/nexusdynamics/installation)**",
       "# ", "# ",
       "## Features",
       "**Customizable Commands**",
