@@ -26,7 +26,7 @@ export default [
 
 
             "# Ranking",
-            "A new optinal ranking window has been added into `/setup` making it easier and less complicated for non-programmers.",
+            "A new optional ranking window has been added into `/setup` making it easier and less complicated for non-programmers.",
             "<table>",
             "<thread>",
             "<tr>",
