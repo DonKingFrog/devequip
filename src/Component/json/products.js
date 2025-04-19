@@ -1,128 +1,4 @@
 export default [
-  // {
-    
-  //   redirect : "/product/nexusdynamics",
-  //   category : "Admin Panel",
-  //   engine : "Roblox",
-  //   price : "FREE",
-
-  //   name : "Nexus Dynamics",
-  
-  //   overview : [
-  //     "**✨ Nexus Dynamics** is a sophisticated admin panel designed for Roblox developers to manage and moderate their games efficiently. It offers a wide range of features and tools to enhance the control and customization of your Roblox experiences.",
-  //     "",
-  //     "Execute private commands with autoi=fill suggestions with over 200 unique commands.",
-  //     "",
-  //     "Edit terrain and sun position in-game, similar to Roblox Studio",
-  //     "",
-  //     "Nexus Dynamics is designed to provide developers with a powerful and user-friendly interface to manage their Roblox games, ensuring a smooth and enjoyable experience for both developers and players.",
-  //     "# ", "# ",
-  //     "## Features",
-  //     "**Customizable Commands**",
-  //     "",
-  //     "Use the custom commands module to create your own commands precicely how Nexus Dynamics made theirs. You're able to use our API to integrate your command into our system to alter it's behavior.",
-  //     "## ",
-  //     "**Game Manager**",
-  //     "",
-  //     "Change how the game looks and behaves by altering the properties of services commonly found in studio explorer. You can change the gravity, skybox, and sound reverb!",
-  //     "## ",
-  //     //"**Studio-Like Editors**",
-  //     //"",
-  //     //"Use our editors to change the world without the need of studio. Using sun editor, you can place the sun at your mouse. Terrain editor can be used to alter how the terrain looks around you.",
-  //     "## ",
-  //     "**CommandBar with Auto Fill Suggestions**",
-  //     "",
-  //     "Write private commands in a command bar for a private and fully automated experience.",	
-  //     "# ", "# ",
-  //     "## Compatability",
-  //     "[TopbarPlus v3.0.0](https://1foreverhd.github.io/TopbarPlus/) by ForeverHD",
-  //     "",
-  //     "[Roblox Ban API](https://devforum.roblox.com/t/introducing-the-ban-api-and-alt-account-detection/3039740) including IP bans"
-  //   ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
-
-  //   contributors : [
-  //     {
-  //       name : "@mark80912",
-  //       deed : "Testing prototypes and quality assurance."
-  //     },
-
-  //     {
-  //       name : "@zeyan200_gotdeleted",
-  //       deed : "Ensuring quality during beta versions."
-  //     },
-
-  //     {
-  //       name : "@bluebxrrybot",
-  //       deed : "Assisting with a better alternative for noclip physics."
-  //     }
-  //   ],
-
-  //   requirements: [
-  //     "Http Request",
-  //     "API Services",
-  //     "Third Party Teleports",
-  //     "Third Party Sales"
-  //   ],
-    
-
-  //   logo : "/imgs/nd/logo.jpg", 
-  //   thumbnails : [
-  //     "/imgs/nd/t1.png",
-  //     "/imgs/nd/t2.png",
-  //     "/imgs/nd/t3.png",
-  //     "/imgs/nd/t4.png",
-  //     "/imgs/nd/t5.png"
-  //   ],
-    
-
-  //   rating : 4.25,
-    
-
-  //   licenses : [
-  //     {
-  //       name : "Design",
-  //       type : "CCBY-NC-ND",
-  //       href : "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en"
-  //     },
-  //     {
-  //       name : "Source-Code",
-  //       type : "MIT License",
-  //       href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
-  //     }
-  //   ],
-    
-
-  //   downloadcount : 8782,
-  //   DISABLED_source : "https://github.com/donkingfrog",
-  //   downloads : [
-  //     {
-  //       name : "Creator Store",
-  //       type : "Link",
-  //       href : "https://create.roblox.com/store/asset/116788591431002/Nexus-Dynamics-20"
-  //     },
-
-  //     {
-  //       name : "RBXM",
-  //       type : "File",
-  //       href : "https://assetdelivery.roblox.com/v1/asset/?id=17677778124"
-  //     }
-  //   ],
-    
-
-  //   version : "2.0.5",
-  //   created : "Oct 16 2024",
-  //   updated : "April 19 2025",
-  //   developer : "DonKingFrog",
-  //   publisher : "Dev Equip",
-
-
-  //   email : "info@devequip.com",
-  //   website : {
-  //     name : "www.devequip.com/contact",
-  //     href : "https://devequip.com/contact"
-  //   }
-  // },
-
   {
     
     redirect : "/product/nexusdynamics",
@@ -137,7 +13,8 @@ export default [
       "",
       "Execute private commands with autoi=fill suggestions with over 200 unique commands.",
       "",
-      "Edit terrain and sun position in-game, similar to Roblox Studio",
+      "Run `/setup` to install Nexus Dynamics, used to rank people instead of adding Ids in a script.",
+      // "Edit terrain and sun position in-game, similar to Roblox Studio",
       "",
       "Nexus Dynamics is designed to provide developers with a powerful and user-friendly interface to manage their Roblox games, ensuring a smooth and enjoyable experience for both developers and players.",
       "# ", "# ",
@@ -150,14 +27,18 @@ export default [
       "",
       "Change how the game looks and behaves by altering the properties of services commonly found in studio explorer. You can change the gravity, skybox, and sound reverb!",
       "## ",
-      "**Studio-Like Editors**",
-      "",
-      "Use our editors to change the world without the need of studio. Using sun editor, you can place the sun at your mouse. Terrain editor can be used to alter how the terrain looks around you.",
+      //"**Studio-Like Editors**",
+      //"",
+      //"Use our editors to change the world without the need of studio. Using sun editor, you can place the sun at your mouse. Terrain editor can be used to alter how the terrain looks around you.",
       "## ",
       "**CommandBar with Auto Fill Suggestions**",
       "",
       "Write private commands in a command bar for a private and fully automated experience.",	
       "# ", "# ",
+      "## Compatability",
+      "[TopbarPlus v3.0.0](https://1foreverhd.github.io/TopbarPlus/) by ForeverHD",
+      "",
+      "[Roblox Ban API](https://devforum.roblox.com/t/introducing-the-ban-api-and-alt-account-detection/3039740) including IP bans"
     ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
@@ -178,6 +59,7 @@ export default [
     ],
 
     requirements: [
+      "Http Request",
       "API Services",
       "Third Party Teleports",
       "Third Party Sales"
@@ -186,7 +68,7 @@ export default [
 
     logo : "/imgs/nd/logo.jpg", 
     thumbnails : [
-      "/imgs/nd/t1.jpg",
+      "/imgs/nd/t1.png",
       "/imgs/nd/t2.png",
       "/imgs/nd/t3.png",
       "/imgs/nd/t4.png",
@@ -228,9 +110,9 @@ export default [
     ],
     
 
-    version : "2.0.2",
+    version : "2.0.5",
     created : "Oct 16 2024",
-    updated : "Dec 15 2024",
+    updated : "April 19 2025",
     developer : "DonKingFrog",
     publisher : "Dev Equip",
 
