@@ -2,7 +2,7 @@ export default [
     {
         title: "v2.0.5 | Nexus Dynamics Hotfix",
         thumbnail: "/imgs/blogPost/nexusstatst5.jpg",
-        description: "Changelog for the brand new version of Nexus Dynamics consisting of a new API, overhauled framework, and much more...",
+        description: "Hotfix for all bugs for v2.0.5's release.",
 
         author: {
             image: "/imgs/donpfp.png",
