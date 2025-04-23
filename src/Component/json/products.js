@@ -11,7 +11,7 @@ export default [
     overview : [
       "**✨ Nexus Dynamics** is a sophisticated admin panel designed for Roblox developers to manage and moderate their games efficiently. It offers a wide range of features and tools to enhance the control and customization of your Roblox experiences.",
       "",
-      "Execute private commands with autoi=fill suggestions with over 200 unique commands.",
+      "Execute private commands with auto-fill suggestions with over 200 unique commands.",
       "",
       "Run `/setup` to install Nexus Dynamics, used to rank people instead of adding Ids in a script.",
       // "Edit terrain and sun position in-game, similar to Roblox Studio",
@@ -95,7 +95,7 @@ export default [
     ],
     
 
-    downloadcount : 34925,
+    downloadcount : 35325,
     DISABLED_source : "https://github.com/donkingfrog",
     downloads : [
       {
