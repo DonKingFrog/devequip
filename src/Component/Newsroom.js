@@ -99,6 +99,18 @@ function RenderNewsPost() {
                 wrapper.appendChild(pre); 
                 container.appendChild(wrapper);
             });                    
+        
+            document.querySelectorAll('img[alt*="57%"]').forEach(img => {
+                img.style.width = "57%";
+            });  
+            
+            document.querySelectorAll('img[alt*="75%"]').forEach(img => {
+                img.style.width = "75%";
+            });  
+
+            document.querySelectorAll('img[alt*="100%"]').forEach(img => {
+                img.style.width = "100%";
+            });  
         }, 0);        
     }, []);
 

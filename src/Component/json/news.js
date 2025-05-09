@@ -1,5 +1,55 @@
 export default [
     {
+        title: "v2.0.6 | Nexus Dynamics Hotfix",
+        thumbnail: "/imgs/blogPost/nexusstatst5.jpg",
+        description: "New themes, changes, and hotfixes for Nexus Dynamics.",
+
+        author: {
+            image: "/imgs/donpfp.png",
+            name: "Donavan",
+            published: "May 9 2025",
+            type: "Hotfix"
+        },
+
+        content: [
+            "<div align='center'>Welcome back developers, we've got an update for you.</div>",
+            "",
+            "# New",
+            "* We've introduced five brand new themes for you to enjoy:",
+            "   * Coffee\n", 
+            "       ![57%](/imgs/blogPost/themePreview.jpg)",
+            "   * Modern\n", 
+            "       ![57%](/imgs/blogPost/themePreview(1).jpg)",
+            "   * Retro\n", 
+            "       ![57%](/imgs/blogPost/themePreview(2).jpg)",
+            "   * Scifi\n", 
+            "       ![57%](/imgs/blogPost/themePreview(3).jpg)",
+            "",
+            "Special thanks to `@THEDRAGONSMINIL` for providing the themes during the UGC Theme event.",
+            "# ",
+            "# Changes",
+            "* We've updated the light theme with a few new color variations.",
+            "* Tags has been shifted around for easier version control.",
+            "* Changed **UserRegisteryService** SetAsync -> SaveAsync",
+            "# ",
+            "# Fixes",
+            "* The UI will now scale correctly when launching Roblox window below 1100 pixels width.",
+            "* BanServices history has been fixed to give the correct player history.",
+            "* Checkban will now correctly check if a player is banned.",
+            "* Unban will now correctly unban a player.",
+            "# ",
+            "",
+            "Documentation for Nexus Dynamics v2.0.5 is currently being written and will be announced soon.",
+            "",
+            "As always, we're excited to hear from you, let us know through *info@devequip.com* or [Discord](https://www.devequip.com/discord/)",
+            "",
+            "Thank you for all the support 💙",
+            "",
+            "*The Dev Equip Team*",
+        ].join("\n")
+    },
+
+    {
         title: "v2.0.5 | Nexus Dynamics Hotfix",
         thumbnail: "/imgs/blogPost/nexusstatst5.jpg",
         description: "Hotfix for all bugs for v2.0.5's release.",

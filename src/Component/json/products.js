@@ -57,6 +57,11 @@ export default [
       {
         name : "@bluebxrrybot",
         deed : "Assisting with a better alternative for noclip physics."
+      },
+
+      {
+        name : "@THEDRAGONSMINIL",
+        deed : "Designing themes during UGC Theme event.",
       }
     ],
 
@@ -95,7 +100,7 @@ export default [
     ],
     
 
-    downloadcount : 35325,
+    downloadcount : 47325,
     DISABLED_source : "https://github.com/donkingfrog",
     downloads : [
       {
@@ -112,9 +117,9 @@ export default [
     ],
     
 
-    version : "2.0.5",
+    version : "2.0.6",
     created : "Oct 16 2024",
-    updated : "April 19 2025",
+    updated : "May 9 2025",
     developer : "DonKingFrog",
     publisher : "Dev Equip",
 
