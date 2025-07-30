@@ -172,7 +172,7 @@ export default [
       {
         name : "@zeyan200_gotdeleted",
         deed : "Testing in early alpha phases."
-      }
+      },
     ],
 
     requirements: [
@@ -204,7 +204,7 @@ export default [
     ],
     
 
-    downloadcount : 52104,
+    downloadcount : 132163,
     source : "https://github.com/donkingfrog",
     downloads : [
       {
@@ -216,14 +216,14 @@ export default [
       {
         name : "RBXM",
         type : "File",
-        href : "https://assetdelivery.roblox.com/v1/asset/?id=116788591431002"
+        href : "/download/donationboard.rbxm"
       }
     ],
     
 
-    version : "3.2",
+    version : "3.3",
     created : "June 1 2024",
-    updated : "Jan 4 2025",
+    updated : "July 30 2025",
     developer : "DonKingFrog",
     publisher : "Dev Equip",
 
