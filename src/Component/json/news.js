@@ -1,11 +1,87 @@
 export default [
     {
+        title: "v3.3 | Donation Board Hotfix",
+        thumbnail: "/imgs/blogPost/dbbackground.jpg",
+        description: "Security patch, Introducing TheNew ProcessReceipt, and a few bug fixes.",
+
+        author: {
+            image: "/imgs/donpfp.jpg",
+            name: "Donavan",
+            published: "July 30 2025",
+            type: "Hotfix"
+        },
+
+        content: [
+            "<div align='center'>Welcome back developers, we've got an update for you.</div>",
+            "",
+            "# ",
+            "# Connecting Your Process Receipt",
+            "",
+            "For those that don't know, Roblox only allows you to use 1 of these per experience:",
+            "```",
+            'game:GetService("MarketplaceService").ProcessReceipt = function(receiptInfo)',
+            "   -- Handle all Developer Product purchases such as: Buy 50 Extra Coins, Buy a revive, etc...",
+            "end",
+            "```",
+            "Previously, you were task to connect your developer product processors to the `ProductsCallback` module script. This essentially limits the powers of Roblox and forces people to change/delete their scripts in-order to use our Donation Board.",
+            "",
+            "This was a hastle to explain to new developers and we opt for an alternative method.",
+            "# ",
+            "# ",
+            "Now with the introduction of a new alternative discovered by `@DonKingFrog`, we're able to connect multiple functions to one key.",
+            "",
+            "Instead of connecting your ProcessReceipt to the `ProductsCallback` module script, you now simply replace one line in your *own* script and it will work like a dream!",
+            "```",
+            "--[❌]",
+            'local MarketplaceService = game:GetService("MarketplaceService")',
+            "",
+            "Marketplace.ProcessReceipt = function(receiptInfo)",
+            "   -- Handle all Developer Product purchases such as: Buy 50 Extra Coins, Buy a revive, etc...",
+            "end",
+            "",
+            "",
+            "--[❌]",
+            'game:GetService("MarketplaceService").ProcessReceipt = function(receiptInfo)',
+                        "   -- Handle all Developer Product purchases such as: Buy 50 Extra Coins, Buy a revive, etc...",
+            "end",
+            "",
+            "------------------------------------------------------------------------------------------------------------",
+            "",
+            "--[✅]",
+            "task.wait(); shared.MarketplaceService.ProcessReceipt = function(receiptInfo)",
+                        "   -- Handle all Developer Product purchases such as: Buy 50 Extra Coins, Buy a revive, etc...",
+            "end",
+            "```",
+            "Utilizing metatables, metamethods, and global variables; we're able to create a much more flexable version of ProcessReceipt that doesn't overwrite the existing function. [Learn More](https://devforum.roblox.com/t/allow-multiple-processreceipts-with-metatables/3842563?u=donkingfrog)",
+            "# ",
+            "# Changes",
+            "* All rigs will now be non-collidable, allowing players to move through them and increase performance.",
+            "* The `ProductsCallback` module script has been discontinued and will not be seen past v4.",
+            "# ",
+            "# Fixes",
+            "* Rigs will now properly align with the stand base.",
+            "* Added security updates for the follow vulnerabilities:",
+            "* The ability to modify all Donation Board settings via an exposed RemoteFunction.",
+            "* The ability to set the donation message to an unfiltered or inappropriate string via RemoteFunction.",
+            "* The ability to alter server-side attributes on objects exposed to the client via RemoteFunction.",
+            "* Developer Products with price set to nil will assumed to be 0.",
+            "* The board will now wait until SurfaceGui.Body has been loaded.",
+            "___",            
+            "As always, we're excited to hear from you, let us know through *info@devequip.com* or [Discord](https://www.devequip.com/discord/)",
+            "",
+            "Thank you for all the support 💙",
+            "",
+            "*The Dev Equip Team*",
+        ].join("\n")
+    },
+
+    {
         title: "v2.0.6 | Nexus Dynamics Hotfix",
         thumbnail: "/imgs/blogPost/nexusstatst5.jpg",
         description: "New themes, changes, and hotfixes for Nexus Dynamics.",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "May 9 2025",
             type: "Hotfix"
@@ -55,7 +131,7 @@ export default [
         description: "Hotfix for all bugs for v2.0.5's release.",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "April 23 2025",
             type: "Hotfix"
@@ -126,7 +202,7 @@ export default [
         description: "Changelog for the brand new version of Nexus Dynamics consisting of a new API, overhauled framework, and much more...",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "April 19 2025",
             type: "Changelog"
@@ -364,7 +440,7 @@ export default [
         description: "The developer reveals the release date for Nexus Dynamics v2.0.5 in addition to previews and information!",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "March 11 2025",
             type: "Dev Preview"
@@ -438,7 +514,7 @@ export default [
         description: "Learn more about how and why we're introducing the new marketplace for Dev Equip's products. Learn more about how and why we're introducing the new marketplace for Dev Equip's products.",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "Jan 23 2025",
             type: "Dev Preview"
@@ -502,7 +578,7 @@ export default [
         description: "Quick patch for invalid developer products along with some bug fixes regarding themes and rigs.",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "Jan 4 2025",
             type: "Hotfix"
@@ -530,7 +606,7 @@ export default [
         description: "Developer of Nexus Dynamics releasing public information regarding Nexus Dynamics's integration of TopbarPlus.",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "Dec 18 2024",
             type: "News"
@@ -561,7 +637,7 @@ export default [
         description: "Learn more about Roblox's Ban API and how Nexus Dynamics will to take full advantage of it.",
 
         author: {
-            image: "/imgs/donpfp.png",
+            image: "/imgs/donpfp.jpg",
             name: "Donavan",
             published: "Dec 10 2024",
             type: "News"
