@@ -141,53 +141,44 @@ export default [
     name : "Donation Board",
     
     overview : [
-      "**✨ Donation Board** is a system designed with the vision of simplicity and meant for monitization. It offers a large sum of features for setting up the donation board hastle free, whilst also bringing features for players to enjoy where-ever.",
+      "A next-generation donation system built for performance, simplicity, and reliability.",
       "## ",
-      "Simulate after-tax donations or sort the board based of amount for ease of accounting.",
+      "Donation Board 4.0 is a complete reimagining of the classic donation experience. Designed for developers who value optimization and ease of setup, it delivers a seamless, modern interface that looks great in any experience.",
       "## ",
-      "Adjustable settings provided in Roblox-Studio on the board during play-test to make the board complete your game!",
+      "Built with a focus on speed and stability, Donation Board 4.0 loads instantly, handles purchases smoothly, and offers a suite of advanced customization options so you can tailor it perfectly to your game’s style. Whether you’re managing small experiences or large-scale games, setup takes minutes and maintenance is effortless.",
       "## ",
-      "Celebrate with editable celebratory messages after each donation. **{player} = username / {robux} = amount**",
-      "## ",
-      "Go through all your developer products and enable/disable them without memorizing the ID. This can be found by play-testing in studio and pressing **Developer Products** under the donate page.",
-      "",
-      "# ", "# ",
-      "## Features",
-      "",
-      "**Customizable Board**",
-      "",
-      "Revamp the board using only built-in UI such as animations, colors, and behaviors.",
-      "## ",
-      "**Simple Developer Products**",
-      "",
-      "Instead of writing IDs within a script, enable them with checkboxes on the board itself by play-testing in Roblox Studio and pressing Donate ➡ Developer Products"
+      "## Key highlights:",
+      "* ⚡ Blazing-fast load times and improved performance.",
+      "#### ",
+      "* 🧩 Streamlined configuration for faster setup.",
+      "#### ",
+      "* 🌃 Modern, feature-rich interface with flexible customization.",
+      "#### ",
+      "* 🛠️ Polished, stable foundation with countless improvements under the hood."
     ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
 
     contributors : [
       {
-        name : "@mark80912",
-        deed : "Testing prototypes and quality assurance."
-      },
-
-      {
-        name : "@zeyan200_gotdeleted",
-        deed : "Testing in early alpha phases."
+        name : "Studio Elttob",
+        deed : "Creator of Fusion 0.3."
       },
     ],
 
     requirements: [
-      "API Services"
+      "API Services", "HTTP Request"
     ],
     
 
     logo : "/imgs/db/logo.png", 
     thumbnails : [
-      "/imgs/db/t1.jpg",
-      "/imgs/db/t2.png"
+      "/imgs/blogpost/dbbanner.png",
+      "/imgs/db/dbpreview.jpg",
+      "/imgs/db/dbproducts.jpg",
+      "/imgs/db/dbprevie2.jpg",
     ],
     
 
-    rating : 4.7,
+    rating : 4.5,
     
 
     licenses : [
@@ -204,8 +195,8 @@ export default [
     ],
     
 
-    downloadcount : 132163,
-    source : "https://github.com/donkingfrog",
+    downloadcount : 187041,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/tree/3abd5ca5f906c0b1e18eb55006da731efa566d8c/Donation%20Board",
     downloads : [
       {
         name : "Creator Store",
@@ -221,9 +212,9 @@ export default [
     ],
     
 
-    version : "3.3",
+    version : "4.0",
     created : "June 1 2024",
-    updated : "July 30 2025",
+    updated : "October 13 2025",
     developer : "DonKingFrog",
     publisher : "Dev Equip",
 
