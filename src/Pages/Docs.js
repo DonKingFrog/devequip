@@ -250,6 +250,7 @@ function RenderDocumentation() {
                         <A href="/docs/frameworks/maid/">Maid</A>
                         <A href="/docs/frameworks/promise/">Promise</A>
                         <A href="/docs/frameworks/signal/">Signal</A>
+                        <A href="/docs/frameworks/class/">Class</A>
                     </div>
                 </div>
 

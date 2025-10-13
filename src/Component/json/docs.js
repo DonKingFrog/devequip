@@ -399,6 +399,136 @@ export default {
                     "",
                 ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
             },
+            
+            class: {
+                name: "Class",
+                
+                pagecontents: [
+                    {
+                        name: "Constructors",
+                    },
+
+                    {
+                        name: "Methods",
+                        sub: [
+                            {
+                                name: "GetPropertyChangedSignal",
+                            },
+
+                            {
+                                name: "GetValues",
+                            },
+
+                            {
+                                name: "GetAttribute",
+                            },
+
+                            {
+                                name: "SetAttribute",
+                            },
+
+                            {
+                                name: "Destroy",
+                            }
+                        ]
+                    },
+
+                    {
+                        name: "Events",
+                        sub: [
+                            {
+                                name: "Changed",
+                            },
+                            {
+                                name: "AttributeChanged",
+                            }
+                        ]
+                    }
+                ],
+
+                content: [
+                    "# Class",
+                    "Framework that provides a robust OOP-like system with built-in memory management using a Maid utility. Supports property tracking, attribute storage, and automatic cleanup of resources like RBXScriptConnections, Instances, threads, and more.",
+                    "####  ", "####  ",
+                    "`Class` instances manage tasks automatically via an internal Maid instance. Properties can trigger events on change, and attributes can be added dynamically.",
+                    "# ", "# ",
+                    "Initializing the module:",
+                    "```lua",
+                    "local Class = require('path/to/module')",
+                    "```",
+                    "## Constructors",
+                    "Creating a brand new `Class` instance with optional properties:",
+                    "```lua",
+                    "local instance = Class.new({ Name = 'Example', CustomProperty = 123 })",
+                    "```",
+                    "## Methods",
+                    "#### ",
+                    "<div id='getpropertychangedsignal'>",
+                    "> <a id='getpropertychangedsignal' href='#getpropertychangedsignal'>GetPropertyChangedSignal</a> (property: string) : RBXScriptSignal",
+                    "Returns a BindableEvent that fires whenever the specified property changes.",
+                    "```lua",
+                    "local signal = instance:GetPropertyChangedSignal('CustomProperty')",
+                    "signal:Connect(function(value)",
+                    "    print('CustomProperty changed to', value)",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='getvalues'>",
+                    "> <a id='getvalues' href='#getvalues'>GetValues</a> () : {[string]: any}",
+                    "Returns a table containing the original properties of the instance.",
+                    "```lua",
+                    "local values = instance:GetValues()",
+                    "print(values.CustomProperty)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='getattribute'>",
+                    "> <a id='getattribute' href='#getattribute'>GetAttribute</a> (name: string) : any",
+                    "Retrieves a stored attribute by name.",
+                    "```lua",
+                    "local value = instance:GetAttribute('SomeAttribute')",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='setattribute'>",
+                    "> <a id='setattribute' href='#setattribute'>SetAttribute</a> (name: string, value: any) : classType",
+                    "Sets or updates an attribute and fires the AttributeChanged event.",
+                    "```lua",
+                    "instance:SetAttribute('SomeAttribute', 42)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='destroy'>",
+                    "> <a id='destroy' href='#destroy'>Destroy</a> () : void",
+                    "Cleans all managed tasks via Maid and destroys all Instance-type properties safely.",
+                    "```lua",
+                    "instance:Destroy()",
+                    "```",
+                    "</div>",
+                    "## Events",
+                    "<div id='changed'>",
+                    "> <a id='changed' href='#changed'>Changed</a> : RBXScriptSignal",
+                    "Fires whenever a property of the Class instance changes.",
+                    "```lua",
+                    "instance.Changed:Connect(function(propertyName, value)",
+                    "    print(propertyName, 'changed to', value)",
+                    "end)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='attributechanged'>",
+                    "> <a id='attributechanged' href='#attributechanged'>AttributeChanged</a> : RBXScriptSignal",
+                    "Fires whenever an attribute is updated using `SetAttribute`.",
+                    "```lua",
+                    "instance.AttributeChanged:Connect(function(name, value)",
+                    "    print(name, 'attribute changed to', value)",
+                    "end)",
+                    "```",
+                    "</div>",
+                ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+            },
+
         }
     },
 

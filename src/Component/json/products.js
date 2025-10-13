@@ -96,6 +96,101 @@ export default [
 
   {
     
+    redirect : "/product/class",
+    category : "Script",
+    engine : "Roblox",
+    price : "FREE",
+
+
+    name : "Class",
+    
+    overview: [
+      "**Class**, a framework designed to provide robust OOP-like structures in Roblox, with built-in memory management using a Maid utility. This module allows property tracking, dynamic attributes, and automatic cleanup of resources such as RBXScriptSignals, threads, Instances, functions, and more.",
+      "# ", "# ",
+      "# Features",
+      "**Property Tracking & Signals**",
+      "",
+      "Each Class instance can track property changes using `GetPropertyChangedSignal(property)` which fires whenever a property is updated.",
+      "",
+      "**Dynamic Attributes**",
+      "",
+      "Add and update attributes dynamically using `SetAttribute(name, value)` and track changes via `AttributeChanged` events.",
+      "",
+      "**Automatic Resource Management**",
+      "",
+      "The module uses an internal Maid instance to manage tasks such as RBXScriptConnections, Instances, threads, functions, tables with Destroy/Cancel, and user data, ensuring safe cleanup.",
+      "",
+      "**Get Values Easily**",
+      "",
+      "Retrieve all original properties of a Class instance via `GetValues()`.",
+      "# ", "# ",
+      "# Documentation",
+      "This module can be used on the `Server` and `Client`. We recommend placing it in ReplicatedStorage for shared access.",
+      "[Read Documentation](/docs/frameworks/class/)",
+      "#### ", "#### ",
+      "Here's a quick example creating a Class instance, tracking property changes, and cleaning up resources automatically:",
+      "```lua",
+      "local Class = require('path/to/module')",
+      "",
+      "-- Create a new instance with some properties",
+      "local playerStats = Class.new({ Name = 'PlayerStats', Score = 0 })",
+      "",
+      "-- Listen for changes to the Score property",
+      "playerStats:GetPropertyChangedSignal('Score'):Connect(function(newValue)",
+      "    print('Score changed to', newValue)",
+      "end)",
+      "",
+      "-- Set an attribute dynamically",
+      "playerStats:SetAttribute('Level', 1)",
+      "",
+      "-- Automatically manage tasks/resources",
+      "playerStats:Destroy() -- Cleans up all RBXScriptConnections, Instances, threads, etc.",
+      "```",
+  ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
+
+    logo : "/imgs/scripts/classt1.jpg", 
+    thumbnails : [
+      "/imgs/scripts/classt1.jpg"
+    ],
+    
+
+    rating : 5,
+    
+    licenses : [
+      {
+        name : "Source-Code",
+        type : "MIT License",
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/LICENSE"
+      }
+    ],
+
+    downloadcount : 1,
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/class.luau",
+    downloads : [
+      {
+        name : "Luau",
+        type : "Link",
+        href : "/download/class.luau",
+      },
+    ],
+    
+
+    version : "1.0",
+    created : "October 13 2025",
+    updated : "October 13 2025",
+    developer : "DonKingFrog",
+    publisher : "Dev Equip",
+
+
+    email : "info@devequip.com",
+    website : {
+      name : "www.devequip.com/contact",
+      href : "https://devequip.com/contact"
+    }
+  },
+
+  {
+    
     redirect : "/product/nexusdynamics",
     category : "Admin Panel",
     engine : "Roblox",
