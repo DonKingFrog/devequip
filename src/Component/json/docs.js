@@ -45,6 +45,10 @@ export default {
 
                             {
                                 name: "DoCleaningByType",
+                            },
+
+                            {
+                                name: "DoCleaningById",
                             }
                         ]
                     }
@@ -68,18 +72,19 @@ export default {
                     "## Methods",
                     "#### ",
                     "<div id='givetask'>",
-                    "> <a href='#givetask'>GiveTask</a> (task: any ) : func",
+                    "> <a href='#givetask'>GiveTask</a> (id: string?, task: any) : func",
                     "Add a task to the pool for bulk cleaning or manual cleaning by running the returned function.",
                     "```",
                     "local connection = game:GetService('Players').PlayerAdded:Connect(function(player)",
                     "   print(`{player.Name} has joined`)",
                     "end)",
-                    "Maid:GiveTask(thread)",
+                    "Maid:GiveTask(thread) --> Random ID",
+                    'Maid:GiveTask("ID HERE", thread) --> Gives the task an ID',
                     "```",
                     "</div>",
                     "___",
                     "<div id='docleaning'>",
-                    "> <a id='docleaning' href='#docleaning'>DoCleaning</a> () : void",
+                    "> <a id='docleaning' href='#docleaning'>DoCleaning</a> () : self",
                     "Clear all the task provided by the method `:GiveTask()`.",                    
                     "```",
                     "Maid:DoCleaning()",
@@ -87,10 +92,18 @@ export default {
                     "</div>",
                     "___",
                     "<div id='docleaningbytype'>",
-                    "> <a id='docleaningbytype' href='#docleaningbytype'>DoCleaningByType</a> (taskType: [typeof]()) : void",
+                    "> <a id='docleaningbytype' href='#docleaningbytype'>DoCleaningByType</a> (taskType: [typeof]()) : self",
                     "Filter the task pool by the given type and clear the remainder.",
                     "```",
                     "Maid:DoCleaningByType(RBXScriptSignal)",
+                    "```",
+                    "</div>",
+                    "___",
+                    "<div id='docleaningbyid'>",
+                    "> <a id='docleaningbyid' href='#docleaningbyid'>DoCleaningById</a> (id: [string]()) : self",
+                    "Filter the task pool by the given id and clear the remainder.",
+                    "```",
+                    'Maid:DoCleaningById("ID HERE")',
                     "```",
                     "</div>",
                 ].join("\n\n").replaceAll("```\n\n", "```\n").replaceAll("\n\n```", "\n```"),
