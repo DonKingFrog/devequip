@@ -574,18 +574,18 @@ export default [
     ],
 
     downloadcount : 58,
-    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.lua",
+    source : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.luau",
     downloads : [
       {
         name : "Lua",
         type : "Link",
-        href : "/download/maid.lua"
+        href : "/download/maid.luau"
       },
 
       {
         name : "GitHub",
         type : "File",
-        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.lua"
+        href : "https://github.com/Dev-Equip/Luau-Frameworks/blob/main/maid.luau"
       },
     ],
     
