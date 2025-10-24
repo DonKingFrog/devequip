@@ -10,10 +10,11 @@ end
 
 
 function Maid:GiveTask(...)
-    local parameters = table.pack(...)
-    local id, task = #parameters > 1 and parameters[1] or "", #parameters > 1 and parameters[2] or parameters[1]
+	local parameters = table.pack(...)
+	local id, task = #parameters > 1 and parameters[1] or "", #parameters > 1 and parameters[2] or parameters[1]
 
-	local n = `{id}{#self._tasks + 1}`
+	local n = 0; for index, _ in self._tasks do if index:find(id) then n+=1 end end
+	n = `{id}{n + 1}`
 	self._tasks[n] = task
 
 	if (typeof(task) == "thread") then
@@ -34,36 +35,75 @@ function Maid:IsATask(task)
 end
 
 
-function Maid:DoCleaningById(id: string)
-     for index, task in self._task do
-        if (not index:find(id)) then continue end
-		self:_doTask(self._tasks[index])
+function Maid:RemoveTask(task)
+	for index, _task in self._tasks or {} do
+		if (task ~= _task) then continue end
 		self._tasks[index] = nil
-    end
+	end
 
-    return self
+	return self
 end
 
 
-function Maid:DoCleaningByType(type)
-    for index, task in self._task do
-        if typeof(task) ~= type then continue end 
+function Maid:RemoveTaskById(id: string)
+	for index, task in self._tasks or {} do
+		if (not index:find(id)) then continue end
+		self._tasks[index] = nil
+	end
+
+	return self
+end
+
+
+function Maid:RemoveTaskByType(type: string)
+	for index, task in self._tasks or {} do
+		if typeof(task) ~= type then continue end 
+		self._tasks[index] = nil
+	end
+
+	return self
+end
+
+
+function Maid:RemoveAllTasks()
+	for index, task in self._task or {} do
+		self._task[index] = nil
+	end
+
+	return self
+end
+
+
+function Maid:DoCleaningById(id: string)
+	for index, task in self._tasks or {} do
+		if (not index:find(id)) then continue end
+		self:_doTask(self._tasks[index])
+		self._tasks[index] = nil
+	end
+
+	return self
+end
+
+
+function Maid:DoCleaningByType(type: string)
+	for index, task in self._tasks or {} do
+		if typeof(task) ~= type then continue end 
 
 		self:_doTask(self._tasks[index])
 		self._tasks[index] = nil
-    end
+	end
 
-    return self
+	return self
 end
 
 
 function Maid:DoCleaning()
-    for index, task in self._task do
-        self:_doTask(self._task[index])
-        self._task[index] = nil
-    end
+	for index, task in self._task or {} do
+		self:_doTask(self._task[index])
+		self._task[index] = nil
+	end
 
-    return self
+	return self
 end
 
 

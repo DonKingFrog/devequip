@@ -6,10 +6,11 @@ export type classType = {
 	ClassName: string,
 	UniqueId: number,
 
-  GetPropertyChangedSignal: (self: classType) -> RBXScriptSignal,
+    GetPropertyChangedSignal: (self: classType) -> RBXScriptSignal,
 	GetValues: (self: classType) -> {[string]: any},
 	GetAttribute: (self: classType, name: string) -> any,
 	SetAttribute: (self: classType, name: string, value: any) -> classType,
+	BindToClose: (self: classType) -> (),
 	Destroy: (self: classType) -> (),
 
 	Changed: RBXScriptSignal,
@@ -21,16 +22,18 @@ local Maid do
 	Maid = {}
 	Maid.__index = Maid
 
-
 	function Maid.new()
 		local self = setmetatable({}, Maid)
 		self._tasks = {}
 		return self
 	end
 
+	function Maid:GiveTask(...)
+		local parameters = table.pack(...)
+		local id, task = #parameters > 1 and parameters[1] or "", #parameters > 1 and parameters[2] or parameters[1]
 
-	function Maid:GiveTask(task)
-		local n = #self._tasks + 1
+		local n = 0; for index, _ in self._tasks do if index:find(id) then n+=1 end end
+		n = `{id}{n + 1}`
 		self._tasks[n] = task
 
 		if (typeof(task) == "thread") then
@@ -45,29 +48,74 @@ local Maid do
 		end
 	end
 
-
 	function Maid:IsATask(task)
 		return table.find({"RBXScriptConnection", "Instance", "function", "thread", "table", "userdata"}, typeof(task)) ~= nil
 	end
 
-
-	function Maid:DoCleaningByType(type)
-		for i = 1, #self._tasks do 
-			if typeof(self._tasks[i]) ~= type then continue end 
-
-			self:_doTask(self._tasks[i])
-			self._tasks[i] = nil
+	function Maid:RemoveTask(task)
+		for index, _task in self._tasks or {} do
+			if (task ~= _task) then continue end
+			self._tasks[index] = nil
 		end
+
+		return self
 	end
 
+	function Maid:RemoveTaskById(id: string)
+		for index, task in self._tasks or {} do
+			if (not index:find(id)) then continue end
+			self._tasks[index] = nil
+		end
+
+		return self
+	end
+
+	function Maid:RemoveTaskByType(type: string)
+		for index, task in self._tasks or {} do
+			if typeof(task) ~= type then continue end 
+			self._tasks[index] = nil
+		end
+
+		return self
+	end
+
+	function Maid:RemoveAllTasks()
+		for index, task in self._task or {} do
+			self._task[index] = nil
+		end
+
+		return self
+	end
+
+	function Maid:DoCleaningById(id: string)
+		for index, task in self._tasks or {} do
+			if (not index:find(id)) then continue end
+			self:_doTask(self._tasks[index])
+			self._tasks[index] = nil
+		end
+
+		return self
+	end
+
+	function Maid:DoCleaningByType(type: string)
+		for index, task in self._tasks or {} do
+			if typeof(task) ~= type then continue end 
+
+			self:_doTask(self._tasks[index])
+			self._tasks[index] = nil
+		end
+
+		return self
+	end
 
 	function Maid:DoCleaning()
-		for i = 1, #self._tasks do
-			self:_doTask(self._tasks[i])
-			self._tasks[i] = nil
+		for index, task in self._task or {} do
+			self:_doTask(self._task[index])
+			self._task[index] = nil
 		end
-	end
 
+		return self
+	end
 
 	function Maid:_doTask(task)
 		if not task then return end
@@ -107,7 +155,9 @@ function Class.new(properties: {[string]: any})
 	local internal = {
 		_data = properties,
 		_maid = Maid.new(),
+		_bindtoclose = nil,
 		_originalproperties = {},
+		_destroying = Instance.new("BindableEvent"),
 		_changed = Instance.new("BindableEvent"),
 		_attributechanged = Instance.new("BindableEvent"),
 		_attributes = {},
@@ -118,6 +168,8 @@ function Class.new(properties: {[string]: any})
 		if (index == "UniqueId") then continue end
 		table.insert(internal._originalproperties, index)
 	end
+	
+	internal.Destroying = internal._destroying.Event
 	internal.Changed = internal._changed.Event
 	internal.AttributeChanged = internal._attributechanged.Event
 
@@ -133,7 +185,7 @@ function Class.new(properties: {[string]: any})
 			if old ~= value then
 				internal._data[key] = value
 				if internal._maid:IsATask(value) then
-					internal._maid:GiveTask(value)
+					internal._maid:GiveTask(key, value)
 				end
 				internal._changed:Fire(key, value)
 			end
@@ -180,12 +232,20 @@ function Class:SetAttribute(name: string, value: any)
 end
 
 
+function Class:BindToClose(func)
+	rawset(self, "_bindtoclose", func)
+	return self
+end
+
+
 function Class:Destroy()
+	if (self._bindtoclose) then self:_bindtoclose() end
+	self._destroying:Fire()
 	self._maid:DoCleaning()
 	pcall(function()
-		for _, object in self do
+		for _, object in self:GetValues() do
 			if (typeof(object) ~= "Instance") then continue end
-			object:Destroy()
+			pcall(object.Destroy, object)
 		end
 	end)
 end
